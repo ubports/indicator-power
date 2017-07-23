@@ -1,3 +1,15 @@
+indicator-power (12.10.8+ubports) vivid; urgency=medium
+
+  * Imported to UBports
+
+ -- UBports auto importer <infra@ubports.com>  Sun, 23 Jul 2017 04:37:04 +0200
+
+indicator-power (12.10.7+ubports) vivid; urgency=medium
+
+  * Imported to UBports
+
+ -- UBports auto importer <infra@ubports.com>  Sun, 23 Jul 2017 04:36:20 +0200
+
 indicator-power (12.10.6+17.04.20161021-0ubuntu1) zesty; urgency=medium
 
   [ Ted Gould ]

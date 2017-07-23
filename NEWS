@@ -22,4 +22,6 @@
 
 12.10.0
  - Refactored the device icon/text code for better test coverage
+ 
+ Test pull request ci builds
 

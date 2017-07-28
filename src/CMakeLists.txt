@@ -1,6 +1,7 @@
 # handwritten sources
 set(SERVICE_MANUAL_SOURCES
     brightness.c
+    flashlight.c
     datafiles.c
     device-provider-mock.c
     device-provider-upower.c
@@ -54,4 +55,3 @@ add_executable (${SERVICE_EXEC} main.c)
 set_source_files_properties(${SERVICE_SOURCES} main.c PROPERTIES COMPILE_FLAGS "${C_WARNING_ARGS} -g -std=c99")
 target_link_libraries (${SERVICE_EXEC} ${SERVICE_LIB} ${SERVICE_DEPS_LIBRARIES} ${GCOV_LIBS})
 install (TARGETS ${SERVICE_EXEC} RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_PKGLIBEXECDIR})
-

@@ -124,6 +124,8 @@ on_get_all_response (GObject * o, GAsyncResult * res, gpointer gdata)
       g_variant_lookup (dict, "TimeToFull", "x", &time_to_full);
       time = time_to_empty ? time_to_empty : time_to_full;
 
+
+
       if ((device = g_hash_table_lookup (p->devices, data->path)))
         {
           g_object_set (device, INDICATOR_POWER_DEVICE_KIND, (gint)kind,
@@ -225,6 +227,9 @@ static void
 refresh_device_soon (IndicatorPowerDeviceProviderUPower * self,
                      const char                         * object_path)
 {
+  // Android: Ignore batt_therm devices since they gives wrong values
+  if (g_str_has_suffix(object_path, "batt_therm"))
+    return;
   priv_t * p = get_priv(self);
 
   g_hash_table_add (p->queued_paths, g_strdup (object_path));
@@ -262,8 +267,11 @@ on_enumerate_devices_response(GObject       * bus,
       ao = g_variant_get_child_value(v, 0);
       g_variant_iter_init(&iter, ao);
       path = NULL;
-      while(g_variant_iter_loop(&iter, "o", &path))
-        refresh_device_soon (gself, path);
+      while(g_variant_iter_loop(&iter, "o", &path)) {
+        // Android: Ignore batt_therm devices since they gives wrong values
+        if (!g_str_has_suffix(path, "batt_therm"))
+          refresh_device_soon (gself, path);
+      }
 
       g_variant_unref(ao);
     }
@@ -280,6 +288,9 @@ on_device_properties_changed(GDBusConnection * connection     G_GNUC_UNUSED,
                              GVariant        * parameters,
                              gpointer          gself)
 {
+  // Android: Ignore batt_therm devices since they gives wrong values
+  if (g_str_has_suffix(object_path, "batt_therm"))
+    return;
   IndicatorPowerDeviceProviderUPower* self;
   priv_t* p;
   IndicatorPowerDevice* device;

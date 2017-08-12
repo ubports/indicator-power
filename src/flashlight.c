@@ -24,9 +24,25 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#define QCOM_SYSFS "/sys/class/leds/torch-light/brightness"
 #define QCOM_ENABLE "255"
 #define QCOM_DISABLE "0"
+
+const size_t qcom_sysfs_size = 2;
+const char* const qcom_sysfs[] = {"/sys/class/leds/torch-light/brightness", "/sys/class/leds/led:flash_torch/brightness"};
+
+char* flash_sysfs_path = NULL;
+
+int
+set_sysfs_path()
+{
+  for (size_t i = 0; i < qcom_sysfs_size; i++) {
+    if (access(qcom_sysfs[i], F_OK ) != -1){
+        flash_sysfs_path = qcom_sysfs[i];
+        return 1;
+    }
+  }
+  return 0;
+}
 
 void
 toggle_flashlight_action(GAction *action,
@@ -37,10 +53,13 @@ toggle_flashlight_action(GAction *action,
   gboolean b;
   FILE* fd;
 
+  if (!set_sysfs_path())
+    return;
+
   state = g_action_get_state(action);
   b = g_variant_get_boolean(state);
   g_variant_unref(state);
-  fd = fopen(QCOM_SYSFS, "w");
+  fd = fopen(flash_sysfs_path, "w");
   if (fd != NULL){
       if (b)
         fprintf(fd, QCOM_DISABLE);
@@ -54,5 +73,5 @@ toggle_flashlight_action(GAction *action,
 int
 flashlight_supported()
 {
-  return access(QCOM_SYSFS, F_OK ) != -1;
+  return set_sysfs_path();
 }

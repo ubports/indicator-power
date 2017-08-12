@@ -124,8 +124,6 @@ on_get_all_response (GObject * o, GAsyncResult * res, gpointer gdata)
       g_variant_lookup (dict, "TimeToFull", "x", &time_to_full);
       time = time_to_empty ? time_to_empty : time_to_full;
 
-
-
       if ((device = g_hash_table_lookup (p->devices, data->path)))
         {
           g_object_set (device, INDICATOR_POWER_DEVICE_KIND, (gint)kind,

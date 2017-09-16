@@ -667,7 +667,7 @@ create_phone_settings_section(IndicatorPowerService * self)
     if (flashlight_activated())
     {
       item = g_menu_item_new(_("Warning: Heavy use can damage the LED!"), "indicator.flashlight");
-      g_menu_append_item(section, item)
+      g_menu_append_item(section, item);
       g_object_unref(item);
     }
   }

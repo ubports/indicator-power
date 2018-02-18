@@ -16,6 +16,36 @@ indicator-power (12.10.7+ubports) vivid; urgency=medium
 
  -- UBports auto importer <infra@ubports.com>  Sun, 23 Jul 2017 04:36:20 +0200
 
+indicator-power (12.10.6+17.04.20170322-0ubuntu1) zesty; urgency=medium
+
+  * no change rebuild
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 22 Mar 2017 18:28:10 +0000
+
+indicator-power (12.10.6+17.04.20170210-0ubuntu1) zesty; urgency=medium
+
+  * Remove old autostart files.
+  * Use gmock module from cmake-extras.
+  * Use coverage support from cmake-extras.
+  * Use intltool support from cmake-extras.
+
+ -- Rodney Dawes <rodney.dawes@canonical.com>  Fri, 10 Feb 2017 17:09:49 +0000
+
+indicator-power (12.10.6+17.04.20170116-0ubuntu1) zesty; urgency=medium
+
+  [ Shih-Yuan Lee (FourDollars) ]
+  * Make device with power supply has higher sorting priority. (LP: #1100546)
+
+ -- charles.kerr@canonical.com <charles.kerr@canonical.com>  Mon, 16 Jan 2017 20:29:09 +0000
+
+indicator-power (12.10.6+17.04.20161201-0ubuntu1) zesty; urgency=medium
+
+  [ Michael Terry ]
+  * Work inside a snap by prefixing hard coded paths with $SNAP. (LP:
+    #1629009)
+
+ -- Rodney Dawes <rodney.dawes@canonical.com>  Thu, 01 Dec 2016 22:34:02 +0000
+
 indicator-power (12.10.6+17.04.20161021-0ubuntu1) zesty; urgency=medium
 
   [ Ted Gould ]

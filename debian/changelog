@@ -1,4 +1,4 @@
-indicator-power (12.10.8+ubports1) bionic; urgency=medium
+indicator-power (12.10.8+ubports1) xenial; urgency=medium
 
   * Update Jenkinsfile
 

@@ -1,217 +1,217 @@
-# Sardinian translation for indicator-power
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# Catalan translation for indicator-power
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
 # This file is distributed under the same license as the indicator-power package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2012-02-05 15:53+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Sardinian <sc@li.org>\n"
+"PO-Revision-Date: 2014-10-07 12:03+0000\n"
+"Last-Translator: David Planella <david.planella@gmail.com>\n"
+"Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
 "X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:553
 msgid "AC Adapter"
-msgstr ""
+msgstr "Adaptador de corrent"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/device.c:557 ../src/service.c:442
 msgid "Battery"
-msgstr ""
+msgstr "Bateria"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/device.c:561
 msgid "UPS"
-msgstr ""
+msgstr "SAI"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/device.c:565
 msgid "Monitor"
-msgstr ""
+msgstr "Monitor"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/device.c:569
 msgid "Mouse"
-msgstr ""
+msgstr "Ratolí"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/device.c:573
 msgid "Keyboard"
-msgstr ""
+msgstr "Teclat"
 
 #. TRANSLATORS: portable device
 #: ../src/device.c:577
 msgid "PDA"
-msgstr ""
+msgstr "Organitzador personal"
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/device.c:581
 msgid "Cell phone"
-msgstr ""
+msgstr "Telèfon mòbil"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/device.c:585
 msgid "Media player"
-msgstr ""
+msgstr "Reproductor multimèdia"
 
 #. TRANSLATORS: tablet device
 #: ../src/device.c:589
 msgid "Tablet"
-msgstr ""
+msgstr "Tauleta tàctil"
 
 #. TRANSLATORS: tablet device
 #: ../src/device.c:593
 msgid "Computer"
-msgstr ""
+msgstr "Ordinador"
 
 #. TRANSLATORS: unknown device
 #: ../src/device.c:597
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
 
 #: ../src/device.c:637
 #, c-format
 msgid "estimating…"
-msgstr ""
+msgstr "estimació..."
 
 #: ../src/device.c:641
 #, c-format
 msgid "unknown"
-msgstr ""
+msgstr "desconegut"
 
 #. TRANSLATORS: H:MM (hours, minutes) to charge the battery. Example: "1:30 to charge"
 #: ../src/device.c:670
 #, c-format
 msgid "%0d:%02d to charge"
-msgstr ""
+msgstr "%0d:%02d per carregar"
 
 #. TRANSLATORS: H:MM (hours, minutes) to discharge the battery. Example: "1:30 left"
 #: ../src/device.c:675
 #, c-format
 msgid "%0d:%02d left"
-msgstr ""
+msgstr "%0d:%02d restant"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) to charge" the battery.
 #. Example: "1 hour 10 minutes to charge"
 #: ../src/device.c:710
 #, c-format
 msgid "%d %s %d %s to charge"
-msgstr ""
+msgstr "%d %s %d %s per carregar"
 
 #: ../src/device.c:711 ../src/device.c:729
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "hora"
+msgstr[1] "hores"
 
 #: ../src/device.c:712 ../src/device.c:719 ../src/device.c:730
 #: ../src/device.c:737
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "minut"
+msgstr[1] "minuts"
 
 #. TRANSLATORS: "Y (minute,minutes) to charge" the battery.
 #. Example: "59 minutes to charge"
 #: ../src/device.c:718
 #, c-format
 msgid "%d %s to charge"
-msgstr ""
+msgstr "%d %s per carregar"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) left" until the battery's empty.
 #. Example: "1 hour 10 minutes left"
 #: ../src/device.c:728
 #, c-format
 msgid "%d %s %d %s left"
-msgstr ""
+msgstr "%d %s %d %s restant"
 
 #. TRANSLATORS: "Y (minute,minutes) left" until the battery's empty.
 #. Example: "59 minutes left"
 #: ../src/device.c:736
 #, c-format
 msgid "%d %s left"
-msgstr ""
+msgstr "%d %s restant"
 
 #. TRANSLATORS: example: "battery (charged)"
 #: ../src/device.c:793
 #, c-format
 msgid "%s (charged)"
-msgstr ""
+msgstr "%s (carregada)"
 
 #. TRANSLATORS: example: "battery (time remaining)"
 #: ../src/device.c:810
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #. TRANSLATORS: after the icon, a time-remaining string + battery %. Example: "(0:59, 33%)"
 #: ../src/device.c:882
 #, c-format
 msgid "(%s, %.0lf%%)"
-msgstr ""
+msgstr "(%s, %.0lf%%)"
 
 #. TRANSLATORS: after the icon, a time-remaining string Example: "(0:59)"
 #: ../src/device.c:887
 #, c-format
 msgid "(%s)"
-msgstr ""
+msgstr "(%s)"
 
 #. TRANSLATORS: after the icon, a battery %. Example: "(33%)"
 #: ../src/device.c:892
 #, c-format
 msgid "(%.0lf%%)"
-msgstr ""
+msgstr "(%.0lf%%)"
 
 #: ../src/notifier.c:286
 msgid "Battery Low"
-msgstr ""
+msgstr "Nivell de bateria baix"
 
 #: ../src/notifier.c:287
 msgid "Battery Critical"
-msgstr ""
+msgstr "Nivell de bateria crític"
 
 #: ../src/notifier.c:289
 #, c-format
 msgid "%.0f%% charge remaining"
-msgstr ""
+msgstr "%.0f%% càrrega restant"
 
 #: ../src/notifier.c:321
 msgid "OK"
-msgstr ""
+msgstr "D'acord"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"
-msgstr ""
+msgstr "Paràmetres de la bateria"
 
 #: ../src/service.c:567
 msgid "Charge level"
-msgstr ""
+msgstr "Nivell de càrrega"
 
 #: ../src/service.c:635
 msgid "Show Time in Menu Bar"
-msgstr ""
+msgstr "Mostra el temps a l'indicador"
 
 #: ../src/service.c:639
 msgid "Show Percentage in Menu Bar"
-msgstr ""
+msgstr "Mostra el percentatge a l'indicador"
 
 #: ../src/service.c:643
 msgid "Power Settings…"
-msgstr ""
+msgstr "Propietats de l'energia..."
 
 #: ../src/service.c:669
 msgid "Adjust brightness automatically"
-msgstr ""
+msgstr "Ajusta la brillantor automàticament"
 
 #: ../src/service.c:675
 msgid "Battery settings…"
-msgstr ""
+msgstr "Paràmetres de la bateria..."

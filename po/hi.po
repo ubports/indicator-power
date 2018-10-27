@@ -1,82 +1,82 @@
-# Sardinian translation for indicator-power
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# Hindi translation for indicator-power
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
 # This file is distributed under the same license as the indicator-power package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2012-02-05 15:53+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Sardinian <sc@li.org>\n"
+"PO-Revision-Date: 2013-09-28 21:53+0000\n"
+"Last-Translator: Sukarn Singh Maini <Unknown>\n"
+"Language-Team: Hindi <hi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
 "X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:553
 msgid "AC Adapter"
-msgstr ""
+msgstr "एसी एडॉप्टर"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/device.c:557 ../src/service.c:442
 msgid "Battery"
-msgstr ""
+msgstr "बैटरी"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/device.c:561
 msgid "UPS"
-msgstr ""
+msgstr "यू.पी.एस."
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/device.c:565
 msgid "Monitor"
-msgstr ""
+msgstr "मॉनिटर"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/device.c:569
 msgid "Mouse"
-msgstr ""
+msgstr "माउस"
 
 #. TRANSLATORS: wireless keyboard with internal battery
 #: ../src/device.c:573
 msgid "Keyboard"
-msgstr ""
+msgstr "कुंजीपटल"
 
 #. TRANSLATORS: portable device
 #: ../src/device.c:577
 msgid "PDA"
-msgstr ""
+msgstr "पी. डी. ऐ."
 
 #. TRANSLATORS: cell phone (mobile...)
 #: ../src/device.c:581
 msgid "Cell phone"
-msgstr ""
+msgstr "सेल फोन"
 
 #. TRANSLATORS: media player, mp3 etc
 #: ../src/device.c:585
 msgid "Media player"
-msgstr ""
+msgstr "मीडिया प्लेयर"
 
 #. TRANSLATORS: tablet device
 #: ../src/device.c:589
 msgid "Tablet"
-msgstr ""
+msgstr "टैब्लेट"
 
 #. TRANSLATORS: tablet device
 #: ../src/device.c:593
 msgid "Computer"
-msgstr ""
+msgstr "कंप्यूटर"
 
 #. TRANSLATORS: unknown device
 #: ../src/device.c:597
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: ../src/device.c:637
 #, c-format
@@ -110,15 +110,15 @@ msgstr ""
 #: ../src/device.c:711 ../src/device.c:729
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "घंटा"
+msgstr[1] "घंटे"
 
 #: ../src/device.c:712 ../src/device.c:719 ../src/device.c:730
 #: ../src/device.c:737
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "मिनट"
+msgstr[1] "मिनट"
 
 #. TRANSLATORS: "Y (minute,minutes) to charge" the battery.
 #. Example: "59 minutes to charge"
@@ -145,13 +145,13 @@ msgstr ""
 #: ../src/device.c:793
 #, c-format
 msgid "%s (charged)"
-msgstr ""
+msgstr "%s (चार्ज है)"
 
 #. TRANSLATORS: example: "battery (time remaining)"
 #: ../src/device.c:810
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #. TRANSLATORS: after the icon, a time-remaining string + battery %. Example: "(0:59, 33%)"
 #: ../src/device.c:882
@@ -163,13 +163,13 @@ msgstr ""
 #: ../src/device.c:887
 #, c-format
 msgid "(%s)"
-msgstr ""
+msgstr "(%s)"
 
 #. TRANSLATORS: after the icon, a battery %. Example: "(33%)"
 #: ../src/device.c:892
 #, c-format
 msgid "(%.0lf%%)"
-msgstr ""
+msgstr "(%.0lf%%)"
 
 #: ../src/notifier.c:286
 msgid "Battery Low"
@@ -198,7 +198,7 @@ msgstr ""
 
 #: ../src/service.c:635
 msgid "Show Time in Menu Bar"
-msgstr ""
+msgstr "मेनू पट्टी में समय दिखाएँ"
 
 #: ../src/service.c:639
 msgid "Show Percentage in Menu Bar"
@@ -206,7 +206,7 @@ msgstr ""
 
 #: ../src/service.c:643
 msgid "Power Settings…"
-msgstr ""
+msgstr "पावर सेटिंग्स ..."
 
 #: ../src/service.c:669
 msgid "Adjust brightness automatically"

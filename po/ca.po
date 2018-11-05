@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2014-10-07 12:03+0000\n"
-"Last-Translator: David Planella <david.planella@gmail.com>\n"
-"Language-Team: Catalan <ca@li.org>\n"
+"PO-Revision-Date: 2018-11-04 00:00+0000\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
+"Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
+"indicator-power/ca/>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:553
@@ -81,7 +83,7 @@ msgstr "Desconegut"
 #: ../src/device.c:637
 #, c-format
 msgid "estimating…"
-msgstr "estimació..."
+msgstr "estimació…"
 
 #: ../src/device.c:641
 #, c-format
@@ -206,7 +208,7 @@ msgstr "Mostra el percentatge a l'indicador"
 
 #: ../src/service.c:643
 msgid "Power Settings…"
-msgstr "Propietats de l'energia..."
+msgstr "Propietats de l'energia…"
 
 #: ../src/service.c:669
 msgid "Adjust brightness automatically"
@@ -214,4 +216,4 @@ msgstr "Ajusta la brillantor automàticament"
 
 #: ../src/service.c:675
 msgid "Battery settings…"
-msgstr "Paràmetres de la bateria..."
+msgstr "Paràmetres de la bateria…"

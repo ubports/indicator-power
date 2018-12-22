@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2014-09-17 13:43+0000\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
-"Language-Team: Indonesian <id@li.org>\n"
+"PO-Revision-Date: 2018-12-28 09:08+0000\n"
+"Last-Translator: Dito Kurnia P <ditokpl@gmail.com>\n"
+"Language-Team: Indonesian <https://translate.ubports.com/projects/ubports/"
+"indicator-power/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:553
@@ -76,12 +78,12 @@ msgstr "Komputer"
 #. TRANSLATORS: unknown device
 #: ../src/device.c:597
 msgid "Unknown"
-msgstr "Tidak dikenal"
+msgstr "Tidak diketahui"
 
 #: ../src/device.c:637
 #, c-format
 msgid "estimating…"
-msgstr "memperkirakan..."
+msgstr "memperkirakan…"
 
 #: ../src/device.c:641
 #, c-format
@@ -184,7 +186,7 @@ msgstr "%.0f%% muatan tersisa"
 
 #: ../src/notifier.c:321
 msgid "OK"
-msgstr "OK"
+msgstr "OKE"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"
@@ -192,7 +194,7 @@ msgstr "Pengaturan baterai"
 
 #: ../src/service.c:567
 msgid "Charge level"
-msgstr "Tingkat isi"
+msgstr "Tingkat pengisian"
 
 #: ../src/service.c:635
 msgid "Show Time in Menu Bar"
@@ -204,7 +206,7 @@ msgstr "Tampilkan Persentase dalam Bilah Menu"
 
 #: ../src/service.c:643
 msgid "Power Settings…"
-msgstr "Pengaturan Daya..."
+msgstr "Pengaturan Daya…"
 
 #: ../src/service.c:669
 msgid "Adjust brightness automatically"
@@ -212,4 +214,4 @@ msgstr "Atur kecerahan secara otomatis"
 
 #: ../src/service.c:675
 msgid "Battery settings…"
-msgstr "Pengaturan baterai..."
+msgstr "Pengaturan baterai…"

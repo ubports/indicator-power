@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2018-11-25 00:03+0000\n"
+"PO-Revision-Date: 2018-12-28 09:07+0000\n"
 "Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports/"
 "indicator-power/sc/>\n"
@@ -33,12 +33,12 @@ msgstr "Bateria"
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/device.c:561
 msgid "UPS"
-msgstr ""
+msgstr "UPS"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
 #: ../src/device.c:565
 msgid "Monitor"
-msgstr ""
+msgstr "Misuradore"
 
 #. TRANSLATORS: wireless mice with internal batteries
 #: ../src/device.c:569
@@ -94,13 +94,13 @@ msgstr "disconnotu"
 #: ../src/device.c:670
 #, c-format
 msgid "%0d:%02d to charge"
-msgstr ""
+msgstr "%0d:%02d pro carrigare"
 
 #. TRANSLATORS: H:MM (hours, minutes) to discharge the battery. Example: "1:30 left"
 #: ../src/device.c:675
 #, c-format
 msgid "%0d:%02d left"
-msgstr ""
+msgstr "%0d:%02d mancante"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) to charge" the battery.
 #. Example: "1 hour 10 minutes to charge"
@@ -127,93 +127,93 @@ msgstr[1] "minutos"
 #: ../src/device.c:718
 #, c-format
 msgid "%d %s to charge"
-msgstr ""
+msgstr "%d %s pro carrigare"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) left" until the battery's empty.
 #. Example: "1 hour 10 minutes left"
 #: ../src/device.c:728
 #, c-format
 msgid "%d %s %d %s left"
-msgstr ""
+msgstr "%d %s %d %s mancante"
 
 #. TRANSLATORS: "Y (minute,minutes) left" until the battery's empty.
 #. Example: "59 minutes left"
 #: ../src/device.c:736
 #, c-format
 msgid "%d %s left"
-msgstr ""
+msgstr "%d %s mancante"
 
 #. TRANSLATORS: example: "battery (charged)"
 #: ../src/device.c:793
 #, c-format
 msgid "%s (charged)"
-msgstr ""
+msgstr "%s (carrigada)"
 
 #. TRANSLATORS: example: "battery (time remaining)"
 #: ../src/device.c:810
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #. TRANSLATORS: after the icon, a time-remaining string + battery %. Example: "(0:59, 33%)"
 #: ../src/device.c:882
 #, c-format
 msgid "(%s, %.0lf%%)"
-msgstr ""
+msgstr "(%s, %.0lf%%)"
 
 #. TRANSLATORS: after the icon, a time-remaining string Example: "(0:59)"
 #: ../src/device.c:887
 #, c-format
 msgid "(%s)"
-msgstr ""
+msgstr "(%s)"
 
 #. TRANSLATORS: after the icon, a battery %. Example: "(33%)"
 #: ../src/device.c:892
 #, c-format
 msgid "(%.0lf%%)"
-msgstr ""
+msgstr "(%.0lf%%)"
 
 #: ../src/notifier.c:286
 msgid "Battery Low"
-msgstr ""
+msgstr "Bateria bàscia"
 
 #: ../src/notifier.c:287
 msgid "Battery Critical"
-msgstr ""
+msgstr "Bateria crìtica"
 
 #: ../src/notifier.c:289
 #, c-format
 msgid "%.0f%% charge remaining"
-msgstr ""
+msgstr "%.0f%% càrriga mancante"
 
 #: ../src/notifier.c:321
 msgid "OK"
-msgstr ""
+msgstr "AB"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"
-msgstr ""
+msgstr "Cunfiguratziones de sa bateria"
 
 #: ../src/service.c:567
 msgid "Charge level"
-msgstr ""
+msgstr "Livellu de càrriga"
 
 #: ../src/service.c:635
 msgid "Show Time in Menu Bar"
-msgstr ""
+msgstr "Ammustra su tempus in sa barra de menù"
 
 #: ../src/service.c:639
 msgid "Show Percentage in Menu Bar"
-msgstr ""
+msgstr "Ammustra pertzentuale in sa barra de menù"
 
 #: ../src/service.c:643
 msgid "Power Settings…"
-msgstr ""
+msgstr "Cunfiguratziones de s'energia…"
 
 #: ../src/service.c:669
 msgid "Adjust brightness automatically"
-msgstr ""
+msgstr "Acontza su lugore in automàticu"
 
 #: ../src/service.c:675
 msgid "Battery settings…"
-msgstr ""
+msgstr "Cunfiguratziones de sa bateria…"

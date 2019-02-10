@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2018-11-12 19:12+0000\n"
-"Last-Translator: Sander <sander.k1007@kpnmail.nl>\n"
+"PO-Revision-Date: 2019-02-11 20:28+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "indicator-power/nl/>\n"
 "Language: nl\n"
@@ -83,7 +83,7 @@ msgstr "Onbekend"
 #: ../src/device.c:637
 #, c-format
 msgid "estimating…"
-msgstr "wordt geschat…"
+msgstr "bezig met schatten…"
 
 #: ../src/device.c:641
 #, c-format
@@ -113,7 +113,7 @@ msgstr "%d %s %d %s tot volledige lading"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "uur"
-msgstr[1] "uren"
+msgstr[1] "uur"
 
 #: ../src/device.c:712 ../src/device.c:719 ../src/device.c:730
 #: ../src/device.c:737
@@ -179,7 +179,7 @@ msgstr "Accu is bijna leeg"
 
 #: ../src/notifier.c:287
 msgid "Battery Critical"
-msgstr "Accu kritiek"
+msgstr "Accuniveau is zeer laag"
 
 #: ../src/notifier.c:289
 #, c-format
@@ -208,7 +208,7 @@ msgstr "Percentage in de menubalk tonen"
 
 #: ../src/service.c:643
 msgid "Power Settings…"
-msgstr "Instellingen energiebeheer…"
+msgstr "Energie-instellingen…"
 
 #: ../src/service.c:669
 msgid "Adjust brightness automatically"

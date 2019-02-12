@@ -1,217 +1,216 @@
-# Indonesian translation for indicator-power
-# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
-# This file is distributed under the same license as the indicator-power package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: indicator-power\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2018-12-28 09:08+0000\n"
-"Last-Translator: Dito Kurnia P <ditokpl@gmail.com>\n"
-"Language-Team: Indonesian <https://translate.ubports.com/projects/ubports/"
-"indicator-power/id/>\n"
-"Language: id\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-07 15:18-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.1.1\n"
-"X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #. TRANSLATORS: system power cord
-#: ../src/device.c:553
+#: ../src/device.c:524
 msgid "AC Adapter"
-msgstr "Adaptor AC"
+msgstr ""
 
 #. TRANSLATORS: laptop primary battery
-#: ../src/device.c:557 ../src/service.c:442
+#: ../src/device.c:528 ../src/service.c:442
 msgid "Battery"
-msgstr "Baterai"
+msgstr ""
 
 #. TRANSLATORS: battery-backed AC power source
-#: ../src/device.c:561
+#: ../src/device.c:532
 msgid "UPS"
-msgstr "UPS"
+msgstr ""
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
-#: ../src/device.c:565
+#: ../src/device.c:536
 msgid "Monitor"
-msgstr "Monitor"
+msgstr ""
 
 #. TRANSLATORS: wireless mice with internal batteries
-#: ../src/device.c:569
+#: ../src/device.c:540
 msgid "Mouse"
-msgstr "Tetikus"
+msgstr ""
 
 #. TRANSLATORS: wireless keyboard with internal battery
-#: ../src/device.c:573
+#: ../src/device.c:544
 msgid "Keyboard"
-msgstr "Papan Ketik"
+msgstr ""
 
 #. TRANSLATORS: portable device
-#: ../src/device.c:577
+#: ../src/device.c:548
 msgid "PDA"
-msgstr "PDA"
+msgstr ""
 
 #. TRANSLATORS: cell phone (mobile...)
-#: ../src/device.c:581
+#: ../src/device.c:552
 msgid "Cell phone"
-msgstr "Ponsel"
+msgstr ""
 
 #. TRANSLATORS: media player, mp3 etc
-#: ../src/device.c:585
+#: ../src/device.c:556
 msgid "Media player"
-msgstr "Pemutar media"
+msgstr ""
 
 #. TRANSLATORS: tablet device
-#: ../src/device.c:589
+#: ../src/device.c:560
 msgid "Tablet"
-msgstr "Tablet"
+msgstr ""
 
 #. TRANSLATORS: tablet device
-#: ../src/device.c:593
+#: ../src/device.c:564
 msgid "Computer"
-msgstr "Komputer"
+msgstr ""
 
 #. TRANSLATORS: unknown device
-#: ../src/device.c:597
+#: ../src/device.c:568
 msgid "Unknown"
-msgstr "Tidak diketahui"
+msgstr ""
 
-#: ../src/device.c:637
+#: ../src/device.c:608
 #, c-format
 msgid "estimating…"
-msgstr "memperkirakan…"
+msgstr ""
 
-#: ../src/device.c:641
+#: ../src/device.c:612
 #, c-format
 msgid "unknown"
-msgstr "tak diketahui"
+msgstr ""
 
 #. TRANSLATORS: H:MM (hours, minutes) to charge the battery. Example: "1:30 to charge"
-#: ../src/device.c:670
+#: ../src/device.c:641
 #, c-format
 msgid "%0d:%02d to charge"
-msgstr "%0d:%02d sampai penuh"
+msgstr ""
 
 #. TRANSLATORS: H:MM (hours, minutes) to discharge the battery. Example: "1:30 left"
-#: ../src/device.c:675
+#: ../src/device.c:646
 #, c-format
 msgid "%0d:%02d left"
-msgstr "%0d:%02d tersisa"
+msgstr ""
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) to charge" the battery.
 #. Example: "1 hour 10 minutes to charge"
-#: ../src/device.c:710
+#: ../src/device.c:681
 #, c-format
 msgid "%d %s %d %s to charge"
-msgstr "%d %s %d %s sampai penuh"
+msgstr ""
 
-#: ../src/device.c:711 ../src/device.c:729
+#: ../src/device.c:682 ../src/device.c:700
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] "jam"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/device.c:712 ../src/device.c:719 ../src/device.c:730
-#: ../src/device.c:737
+#: ../src/device.c:683 ../src/device.c:690 ../src/device.c:701
+#: ../src/device.c:708
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] "menit"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: "Y (minute,minutes) to charge" the battery.
 #. Example: "59 minutes to charge"
-#: ../src/device.c:718
+#: ../src/device.c:689
 #, c-format
 msgid "%d %s to charge"
-msgstr "%d %s sampai penuh"
+msgstr ""
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) left" until the battery's empty.
 #. Example: "1 hour 10 minutes left"
-#: ../src/device.c:728
+#: ../src/device.c:699
 #, c-format
 msgid "%d %s %d %s left"
-msgstr "%d %s %d %s tersisa"
+msgstr ""
 
 #. TRANSLATORS: "Y (minute,minutes) left" until the battery's empty.
 #. Example: "59 minutes left"
-#: ../src/device.c:736
+#: ../src/device.c:707
 #, c-format
 msgid "%d %s left"
-msgstr "%d %s tersisa"
+msgstr ""
 
 #. TRANSLATORS: example: "battery (charged)"
-#: ../src/device.c:793
+#: ../src/device.c:764
 #, c-format
 msgid "%s (charged)"
-msgstr "%s (terisi)"
+msgstr ""
 
 #. TRANSLATORS: example: "battery (time remaining)"
-#: ../src/device.c:810
+#: ../src/device.c:781
 #, c-format
 msgid "%s (%s)"
-msgstr "%s (%s)"
+msgstr ""
 
 #. TRANSLATORS: after the icon, a time-remaining string + battery %. Example: "(0:59, 33%)"
-#: ../src/device.c:882
+#: ../src/device.c:853
 #, c-format
 msgid "(%s, %.0lf%%)"
-msgstr "(%s, %.0lf%%)"
+msgstr ""
 
 #. TRANSLATORS: after the icon, a time-remaining string Example: "(0:59)"
-#: ../src/device.c:887
+#: ../src/device.c:858
 #, c-format
 msgid "(%s)"
-msgstr "(%s)"
+msgstr ""
 
 #. TRANSLATORS: after the icon, a battery %. Example: "(33%)"
-#: ../src/device.c:892
+#: ../src/device.c:863
 #, c-format
 msgid "(%.0lf%%)"
-msgstr "(%.0lf%%)"
+msgstr ""
 
 #: ../src/notifier.c:286
 msgid "Battery Low"
-msgstr "Baterai Lemah"
+msgstr ""
 
 #: ../src/notifier.c:287
 msgid "Battery Critical"
-msgstr "Baterai Kritis"
+msgstr ""
 
 #: ../src/notifier.c:289
 #, c-format
 msgid "%.0f%% charge remaining"
-msgstr "%.0f%% muatan tersisa"
+msgstr ""
 
 #: ../src/notifier.c:321
 msgid "OK"
-msgstr "OKE"
+msgstr ""
 
 #: ../src/notifier.c:322
 msgid "Battery settings"
-msgstr "Pengaturan baterai"
+msgstr ""
 
 #: ../src/service.c:567
 msgid "Charge level"
-msgstr "Tingkat pengisian"
+msgstr ""
 
 #: ../src/service.c:635
 msgid "Show Time in Menu Bar"
-msgstr "Tampilkan Waktu pada Baris Menu"
+msgstr ""
 
 #: ../src/service.c:639
 msgid "Show Percentage in Menu Bar"
-msgstr "Tampilkan Persentase dalam Bilah Menu"
+msgstr ""
 
 #: ../src/service.c:643
 msgid "Power Settings…"
-msgstr "Pengaturan Daya…"
+msgstr ""
 
 #: ../src/service.c:669
 msgid "Adjust brightness automatically"
-msgstr "Atur kecerahan secara otomatis"
+msgstr ""
 
 #: ../src/service.c:675
 msgid "Battery settings…"
-msgstr "Pengaturan baterai…"
+msgstr ""

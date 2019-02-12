@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2015-06-03 18:43+0000\n"
-"Last-Translator: tomoe_musashi <hkg.musashi@gmail.com>\n"
-"Language-Team: Chinese (Hong Kong) <zh_HK@li.org>\n"
+"PO-Revision-Date: 2018-11-25 00:01+0000\n"
+"Last-Translator: Louies <louies0623@gmail.com>\n"
+"Language-Team: Chinese (Hong Kong) <https://translate.ubports.com/projects/"
+"ubports/indicator-power/zh_Hant_HK/>\n"
+"Language: zh_HK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:553
@@ -81,7 +83,7 @@ msgstr "未知"
 #: ../src/device.c:637
 #, c-format
 msgid "estimating…"
-msgstr "估算中..."
+msgstr "估算中…"
 
 #: ../src/device.c:641
 #, c-format
@@ -204,7 +206,7 @@ msgstr "於選單列內顯示百分比"
 
 #: ../src/service.c:643
 msgid "Power Settings…"
-msgstr "電源設定..."
+msgstr "電源設定…"
 
 #: ../src/service.c:669
 msgid "Adjust brightness automatically"
@@ -212,4 +214,4 @@ msgstr "自動調節亮度"
 
 #: ../src/service.c:675
 msgid "Battery settings…"
-msgstr "電源設定..."
+msgstr "電源設定…"

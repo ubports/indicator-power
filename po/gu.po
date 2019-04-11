@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2019-04-11 16:14+0000\n"
+"PO-Revision-Date: 2019-04-14 00:00+0000\n"
 "Last-Translator: Aashrut <Aashrut99@gmail.com>\n"
 "Language-Team: Gujarati <https://translate.ubports.com/projects/ubports/"
 "indicator-power/gu/>\n"
@@ -216,4 +216,4 @@ msgstr "બ્રાઈટનેસ આપમેળે સમયોજિત ક
 
 #: ../src/service.c:675
 msgid "Battery settings…"
-msgstr "બેટરી સેટિંગ્સ"
+msgstr "બેટરી સેટિંગ્સ…"

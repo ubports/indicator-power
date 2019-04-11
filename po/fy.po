@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-04-03 09:13+0000\n"
-"PO-Revision-Date: 2019-04-11 09:04+0000\n"
+"PO-Revision-Date: 2019-04-14 00:00+0000\n"
 "Last-Translator: Tom Dom <thomas@patoel.nl>\n"
 "Language-Team: Frisian <https://translate.ubports.com/projects/ubports/"
 "indicator-power/fy/>\n"
@@ -107,7 +107,7 @@ msgstr "%0d:%02d restearend"
 #: ../src/device.c:710
 #, c-format
 msgid "%d %s %d %s to charge"
-msgstr "%d %s %d %s om op te laden"
+msgstr "%d %s %d %s om folslein op te laden"
 
 #: ../src/device.c:711 ../src/device.c:729
 msgid "hour"
@@ -127,7 +127,7 @@ msgstr[1] "minuten"
 #: ../src/device.c:718
 #, c-format
 msgid "%d %s to charge"
-msgstr "%d %s om te laden"
+msgstr "%d %s om folslein op te laden"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) left" until the battery's empty.
 #. Example: "1 hour 10 minutes left"

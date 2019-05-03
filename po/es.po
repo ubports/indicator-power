@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: indicator-power\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-04-03 09:13+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-03 16:56-0400\n"
 "PO-Revision-Date: 2018-11-04 00:02+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/ubports/"
@@ -21,102 +21,102 @@ msgstr ""
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
 
 #. TRANSLATORS: system power cord
-#: ../src/device.c:553
+#: ../src/device.c:524
 msgid "AC Adapter"
 msgstr "Adaptador de CA"
 
 #. TRANSLATORS: laptop primary battery
-#: ../src/device.c:557 ../src/service.c:442
+#: ../src/device.c:528 ../src/service.c:443
 msgid "Battery"
 msgstr "Batería"
 
 #. TRANSLATORS: battery-backed AC power source
-#: ../src/device.c:561
+#: ../src/device.c:532
 msgid "UPS"
 msgstr "SAI"
 
 #. TRANSLATORS: a monitor is a device to measure voltage and current
-#: ../src/device.c:565
+#: ../src/device.c:536
 msgid "Monitor"
 msgstr "Monitor de voltaje"
 
 #. TRANSLATORS: wireless mice with internal batteries
-#: ../src/device.c:569
+#: ../src/device.c:540
 msgid "Mouse"
 msgstr "Ratón"
 
 #. TRANSLATORS: wireless keyboard with internal battery
-#: ../src/device.c:573
+#: ../src/device.c:544
 msgid "Keyboard"
 msgstr "Teclado"
 
 #. TRANSLATORS: portable device
-#: ../src/device.c:577
+#: ../src/device.c:548
 msgid "PDA"
 msgstr "PDA"
 
 #. TRANSLATORS: cell phone (mobile...)
-#: ../src/device.c:581
+#: ../src/device.c:552
 msgid "Cell phone"
 msgstr "Teléfono móvil"
 
 #. TRANSLATORS: media player, mp3 etc
-#: ../src/device.c:585
+#: ../src/device.c:556
 msgid "Media player"
 msgstr "Reproductor multimedia"
 
 #. TRANSLATORS: tablet device
-#: ../src/device.c:589
+#: ../src/device.c:560
 msgid "Tablet"
 msgstr "Tableta"
 
 #. TRANSLATORS: tablet device
-#: ../src/device.c:593
+#: ../src/device.c:564
 msgid "Computer"
 msgstr "Dispositivo"
 
 #. TRANSLATORS: unknown device
-#: ../src/device.c:597
+#: ../src/device.c:568
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: ../src/device.c:637
+#: ../src/device.c:608
 #, c-format
 msgid "estimating…"
 msgstr "estimando…"
 
-#: ../src/device.c:641
+#: ../src/device.c:612
 #, c-format
 msgid "unknown"
 msgstr "desconocido"
 
 #. TRANSLATORS: H:MM (hours, minutes) to charge the battery. Example: "1:30 to charge"
-#: ../src/device.c:670
+#: ../src/device.c:641
 #, c-format
 msgid "%0d:%02d to charge"
 msgstr "%0d:%02d para carga completa"
 
 #. TRANSLATORS: H:MM (hours, minutes) to discharge the battery. Example: "1:30 left"
-#: ../src/device.c:675
+#: ../src/device.c:646
 #, c-format
 msgid "%0d:%02d left"
 msgstr "queda %0d:%02d"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) to charge" the battery.
 #. Example: "1 hour 10 minutes to charge"
-#: ../src/device.c:710
+#: ../src/device.c:681
 #, c-format
 msgid "%d %s %d %s to charge"
 msgstr "%d %s %d %s para carga completa"
 
-#: ../src/device.c:711 ../src/device.c:729
+#: ../src/device.c:682 ../src/device.c:700
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "hora"
 msgstr[1] "horas"
 
-#: ../src/device.c:712 ../src/device.c:719 ../src/device.c:730
-#: ../src/device.c:737
+#: ../src/device.c:683 ../src/device.c:690 ../src/device.c:701
+#: ../src/device.c:708
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "minuto"
@@ -124,51 +124,51 @@ msgstr[1] "minutos"
 
 #. TRANSLATORS: "Y (minute,minutes) to charge" the battery.
 #. Example: "59 minutes to charge"
-#: ../src/device.c:718
+#: ../src/device.c:689
 #, c-format
 msgid "%d %s to charge"
 msgstr "%d %s para carga completa"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) left" until the battery's empty.
 #. Example: "1 hour 10 minutes left"
-#: ../src/device.c:728
+#: ../src/device.c:699
 #, c-format
 msgid "%d %s %d %s left"
 msgstr "queda %d %s %d %s"
 
 #. TRANSLATORS: "Y (minute,minutes) left" until the battery's empty.
 #. Example: "59 minutes left"
-#: ../src/device.c:736
+#: ../src/device.c:707
 #, c-format
 msgid "%d %s left"
 msgstr "queda %d %s"
 
 #. TRANSLATORS: example: "battery (charged)"
-#: ../src/device.c:793
+#: ../src/device.c:764
 #, c-format
 msgid "%s (charged)"
 msgstr "%s (cargado)"
 
 #. TRANSLATORS: example: "battery (time remaining)"
-#: ../src/device.c:810
+#: ../src/device.c:781
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #. TRANSLATORS: after the icon, a time-remaining string + battery %. Example: "(0:59, 33%)"
-#: ../src/device.c:882
+#: ../src/device.c:853
 #, c-format
 msgid "(%s, %.0lf%%)"
 msgstr "(%s, %.0lf %%)"
 
 #. TRANSLATORS: after the icon, a time-remaining string Example: "(0:59)"
-#: ../src/device.c:887
+#: ../src/device.c:858
 #, c-format
 msgid "(%s)"
 msgstr "(%s)"
 
 #. TRANSLATORS: after the icon, a battery %. Example: "(33%)"
-#: ../src/device.c:892
+#: ../src/device.c:863
 #, c-format
 msgid "(%.0lf%%)"
 msgstr "(%.0lf %%)"
@@ -194,26 +194,34 @@ msgstr "Aceptar"
 msgid "Battery settings"
 msgstr "Configuración de batería"
 
-#: ../src/service.c:567
+#: ../src/service.c:568
 msgid "Charge level"
 msgstr "Nivel de carga"
 
-#: ../src/service.c:635
+#: ../src/service.c:636
 msgid "Show Time in Menu Bar"
 msgstr "Mostrar tiempo en la barra"
 
-#: ../src/service.c:639
+#: ../src/service.c:640
 msgid "Show Percentage in Menu Bar"
 msgstr "Mostrar porcentaje en la barra"
 
-#: ../src/service.c:643
+#: ../src/service.c:644
 msgid "Power Settings…"
 msgstr "Configuración de energía…"
 
-#: ../src/service.c:669
+#: ../src/service.c:670
 msgid "Adjust brightness automatically"
 msgstr "Ajustar el brillo automáticamente"
 
-#: ../src/service.c:675
+#: ../src/service.c:678
+msgid "Flashlight"
+msgstr ""
+
+#: ../src/service.c:684
+msgid "Warning: Heavy use can damage the LED!"
+msgstr ""
+
+#: ../src/service.c:690
 msgid "Battery settings…"
 msgstr "Configuración de batería…"

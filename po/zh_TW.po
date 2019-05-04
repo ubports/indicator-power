@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2019-05-03 21:03+0000\n"
+"PO-Revision-Date: 2019-05-05 07:02+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/indicator-power/zh_Hant/>\n"
@@ -214,11 +214,11 @@ msgstr "自動調整亮度"
 
 #: ../src/service.c:678
 msgid "Flashlight"
-msgstr ""
+msgstr "手電筒"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"
-msgstr ""
+msgstr "警告：大量使用可能會使您的 LED 損壞！"
 
 #: ../src/service.c:690
 msgid "Battery settings…"

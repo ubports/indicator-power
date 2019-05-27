@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2018-11-25 00:01+0000\n"
-"Last-Translator: Louies <louies0623@gmail.com>\n"
+"PO-Revision-Date: 2019-05-08 18:49+0000\n"
+"Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <https://translate.ubports.com/projects/"
 "ubports/indicator-power/zh_Hant_HK/>\n"
 "Language: zh_HK\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
 
 #. TRANSLATORS: system power cord
@@ -214,11 +214,11 @@ msgstr "自動調節亮度"
 
 #: ../src/service.c:678
 msgid "Flashlight"
-msgstr ""
+msgstr "手電筒"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"
-msgstr ""
+msgstr "警告: 大量使用可能會令你嘅 LED 損壞！"
 
 #: ../src/service.c:690
 msgid "Battery settings…"

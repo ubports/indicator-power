@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2019-06-22 18:04+0000\n"
-"Last-Translator: lxdb <dinia200719@gmail.com>\n"
+"PO-Revision-Date: 2019-08-05 14:49+0000\n"
+"Last-Translator: vokaliz <vokaliz@protonmail.com>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
 "indicator-power/ru/>\n"
 "Language: ru\n"
@@ -219,11 +219,11 @@ msgstr "Настроить яркость автоматически"
 
 #: ../src/service.c:678
 msgid "Flashlight"
-msgstr ""
+msgstr "Фонарик"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"
-msgstr ""
+msgstr "Предупреждение: Интенсивное использование может повредить светодиод!"
 
 #: ../src/service.c:690
 msgid "Battery settings…"

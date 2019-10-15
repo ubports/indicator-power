@@ -28,7 +28,8 @@
 #define QCOM_DISABLE "0"
 
 const size_t qcom_sysfs_size = 2;
-const char* const qcom_sysfs[] = {"/sys/class/leds/torch-light/brightness", "/sys/class/leds/led:flash_torch/brightness"};
+const char* const qcom_sysfs[] = {"/sys/class/leds/torch-light/brightness", "/sys/class/leds/led:flash_torch/brightness",
+                                  "/sys/class/leds/led:torch_0/brightness", "/sys/class/leds/led:torch_1/brightness"};
 
 char* flash_sysfs_path = NULL;
 gboolean activated = 0;

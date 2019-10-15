@@ -27,11 +27,14 @@
 #define QCOM_ENABLE "255"
 #define QCOM_DISABLE "0"
 
-const size_t qcom_sysfs_size = 4;
+const size_t qcom_sysfs_size = 10;
 const size_t qcom_switch_size = 1;
 
 const char* const qcom_sysfs[] = {"/sys/class/leds/torch-light/brightness", "/sys/class/leds/led:flash_torch/brightness",
-                                  "/sys/class/leds/led:torch_0/brightness", "/sys/class/leds/led:torch_1/brightness"};
+                                  "/sys/class/leds/led:torch_0/brightness", "/sys/class/leds/led:torch_1/brightness",
+                                  "/sys/class/leds/torch-light0/brightness", "/sys/class/leds/torch-light1/brightness",
+                                  "/sys/class/leds/torch0/brightness", "/sys/class/leds/torch1/brightness",
+                                  "/sys/class/leds/flash0/brightness", "/sys/class/leds/flash1/brightness"};
 const char* const qcom_switch[] = {"/sys/class/leds/led:switch/brightness"};
 
 char* flash_sysfs_path = NULL;

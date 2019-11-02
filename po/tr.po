@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2016-05-14 15:24+0000\n"
-"Last-Translator: Butterfly <Unknown>\n"
-"Language-Team: Turkish <tr@li.org>\n"
+"PO-Revision-Date: 2019-11-03 20:36+0000\n"
+"Last-Translator: Ege Öz <ege.oz@tutanota.com>\n"
+"Language-Team: Turkish <https://translate.ubports.com/projects/ubports/"
+"indicator-power/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:524
@@ -187,7 +188,7 @@ msgstr "%%%.0f şarj kaldı"
 
 #: ../src/notifier.c:321
 msgid "OK"
-msgstr "TAMAM"
+msgstr "Tamam"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"

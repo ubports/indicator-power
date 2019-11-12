@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 2.8.9)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
+include (GNUInstallDirs)
+
 set(PROJECT_VERSION "16.10.0")
 set(PACKAGE ${CMAKE_PROJECT_NAME})
 set(GETTEXT_PACKAGE "indicator-power")
@@ -21,7 +23,6 @@ add_definitions(-DSERVICE_EXEC="${SERVICE_EXEC}")
 ##  GNU standard installation directories
 ## 
 
-include (GNUInstallDirs)
 if (EXISTS "/etc/debian_version") # Workaround for libexecdir on debian
   set (CMAKE_INSTALL_LIBEXECDIR "${CMAKE_INSTALL_LIBDIR}")
   set (CMAKE_INSTALL_FULL_LIBEXECDIR "${CMAKE_INSTALL_FULL_LIBDIR}")

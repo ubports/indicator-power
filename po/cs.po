@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2020-02-29 19:21+0000\n"
+"PO-Revision-Date: 2020-03-03 12:22+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "indicator-power/cs/>\n"
@@ -23,12 +23,12 @@ msgstr ""
 #. TRANSLATORS: system power cord
 #: ../src/device.c:524
 msgid "AC Adapter"
-msgstr "Zdroj napětí"
+msgstr "Síťový napájecí adaptér"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/device.c:528 ../src/service.c:443
 msgid "Battery"
-msgstr "Baterie"
+msgstr "Akumulátor"
 
 #. TRANSLATORS: battery-backed AC power source
 #: ../src/device.c:532
@@ -83,7 +83,7 @@ msgstr "Neznámé"
 #: ../src/device.c:608
 #, c-format
 msgid "estimating…"
-msgstr "odhaduji…"
+msgstr "odhaduje se…"
 
 #: ../src/device.c:612
 #, c-format
@@ -181,12 +181,12 @@ msgstr "Baterie je téměř vybitá"
 
 #: ../src/notifier.c:287
 msgid "Battery Critical"
-msgstr "Kritický stav baterie"
+msgstr "Akumulátor je vybitý"
 
 #: ../src/notifier.c:289
 #, c-format
 msgid "%.0f%% charge remaining"
-msgstr "%.0f%% zbývá do nabytí"
+msgstr "%.0f%% zbývá do nabití"
 
 #: ../src/notifier.c:321
 msgid "OK"
@@ -194,7 +194,7 @@ msgstr "OK"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"
-msgstr "Nastavení baterie"
+msgstr "Nastavení akumulátoru"
 
 #: ../src/service.c:568
 msgid "Charge level"
@@ -226,4 +226,4 @@ msgstr "Upozornění: Intenzivní používání může poškodit LED!"
 
 #: ../src/service.c:690
 msgid "Battery settings…"
-msgstr "Nastavení baterie…"
+msgstr "Nastavení akumulátoru…"

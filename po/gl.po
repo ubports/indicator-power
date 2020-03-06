@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2014-12-19 21:47+0000\n"
-"Last-Translator: Xosé <Unknown>\n"
-"Language-Team: Galician <gl@li.org>\n"
+"PO-Revision-Date: 2020-03-07 10:22+0000\n"
+"Last-Translator: Neutrum N <neutro@tutanota.com>\n"
+"Language-Team: Galician <https://translate.ubports.com/projects/ubports/"
+"indicator-power/gl/>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:524
@@ -82,7 +83,7 @@ msgstr "Descoñecido"
 #: ../src/device.c:608
 #, c-format
 msgid "estimating…"
-msgstr "estimando..."
+msgstr "estimando…"
 
 #: ../src/device.c:612
 #, c-format
@@ -93,7 +94,7 @@ msgstr "descoñecido"
 #: ../src/device.c:641
 #, c-format
 msgid "%0d:%02d to charge"
-msgstr "%0d:%02d para completar"
+msgstr "%0d:%02d pra cargar"
 
 #. TRANSLATORS: H:MM (hours, minutes) to discharge the battery. Example: "1:30 left"
 #: ../src/device.c:646
@@ -106,7 +107,7 @@ msgstr "%0d:%02d restante"
 #: ../src/device.c:681
 #, c-format
 msgid "%d %s %d %s to charge"
-msgstr "%d %s %d %s para completar"
+msgstr "%d %s %d %s pra cargar"
 
 #: ../src/device.c:682 ../src/device.c:700
 msgid "hour"
@@ -126,7 +127,7 @@ msgstr[1] "minutos"
 #: ../src/device.c:689
 #, c-format
 msgid "%d %s to charge"
-msgstr "%d %s para completar"
+msgstr "%d %s pra cargar"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) left" until the battery's empty.
 #. Example: "1 hour 10 minutes left"
@@ -183,7 +184,7 @@ msgstr "Batería en estado crítico"
 #: ../src/notifier.c:289
 #, c-format
 msgid "%.0f%% charge remaining"
-msgstr "Fica o %.0f%% da carga"
+msgstr "Queda o %.0f%% da carga"
 
 #: ../src/notifier.c:321
 msgid "OK"
@@ -191,23 +192,23 @@ msgstr "Aceptar"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"
-msgstr "Configuración da batería"
+msgstr "Axustes da batería"
 
 #: ../src/service.c:568
 msgid "Charge level"
-msgstr "Nivel da carga"
+msgstr "Nivel de carga"
 
 #: ../src/service.c:636
 msgid "Show Time in Menu Bar"
-msgstr "Mostrar tempo na barra do menú"
+msgstr "Mostrar tempo na barra de menú"
 
 #: ../src/service.c:640
 msgid "Show Percentage in Menu Bar"
-msgstr "Mostrar a porcentaxe na barra do menú"
+msgstr "Mostrar a porcentaxe na barra de menú"
 
 #: ../src/service.c:644
 msgid "Power Settings…"
-msgstr "Preferencias de enerxía…"
+msgstr "Axustes de enerxía…"
 
 #: ../src/service.c:670
 msgid "Adjust brightness automatically"
@@ -215,12 +216,12 @@ msgstr "Axustar o brillo automaticamente"
 
 #: ../src/service.c:678
 msgid "Flashlight"
-msgstr ""
+msgstr "Lanterna"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"
-msgstr ""
+msgstr "Aviso: Moito uso pode danar o LED!"
 
 #: ../src/service.c:690
 msgid "Battery settings…"
-msgstr "Configuración da batería..."
+msgstr "Axustes da batería…"

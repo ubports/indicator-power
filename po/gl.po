@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2020-03-07 10:22+0000\n"
+"PO-Revision-Date: 2020-04-07 15:23+0000\n"
 "Last-Translator: Neutrum N <neutro@tutanota.com>\n"
 "Language-Team: Galician <https://translate.ubports.com/projects/ubports/"
 "indicator-power/gl/>\n"
@@ -94,7 +94,7 @@ msgstr "descoñecido"
 #: ../src/device.c:641
 #, c-format
 msgid "%0d:%02d to charge"
-msgstr "%0d:%02d pra cargar"
+msgstr "%0d:%02d para cargar"
 
 #. TRANSLATORS: H:MM (hours, minutes) to discharge the battery. Example: "1:30 left"
 #: ../src/device.c:646
@@ -107,7 +107,7 @@ msgstr "%0d:%02d restante"
 #: ../src/device.c:681
 #, c-format
 msgid "%d %s %d %s to charge"
-msgstr "%d %s %d %s pra cargar"
+msgstr "%d %s %d %s para cargar"
 
 #: ../src/device.c:682 ../src/device.c:700
 msgid "hour"
@@ -127,7 +127,7 @@ msgstr[1] "minutos"
 #: ../src/device.c:689
 #, c-format
 msgid "%d %s to charge"
-msgstr "%d %s pra cargar"
+msgstr "%d %s para cargar"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) left" until the battery's empty.
 #. Example: "1 hour 10 minutes left"

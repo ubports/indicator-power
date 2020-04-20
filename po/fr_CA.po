@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2015-04-14 13:16+0000\n"
-"Last-Translator: AO <Unknown>\n"
-"Language-Team: French (Canada) <fr_CA@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-03-07 10:22+0000\n"
+"Last-Translator: Ryan Argente <rargente@lonerider.one>\n"
+"Language-Team: French (Canada) <https://translate.ubports.com/projects/"
+"ubports/indicator-power/fr_CA/>\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:524
@@ -77,7 +78,7 @@ msgstr "Ordinateur"
 #. TRANSLATORS: unknown device
 #: ../src/device.c:568
 msgid "Unknown"
-msgstr "Inconnue"
+msgstr "Inconnu"
 
 #: ../src/device.c:608
 #, c-format
@@ -215,12 +216,12 @@ msgstr "Ajuster la luminosité automatiquement"
 
 #: ../src/service.c:678
 msgid "Flashlight"
-msgstr ""
+msgstr "Lampe de poche"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"
-msgstr ""
+msgstr "Attention: une utilisation intensive peut endommager la diode!"
 
 #: ../src/service.c:690
 msgid "Battery settings…"
-msgstr "Paramètres de la batterie"
+msgstr "Paramètres de la batterie…"

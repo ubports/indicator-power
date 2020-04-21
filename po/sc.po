@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2018-12-28 09:07+0000\n"
+"PO-Revision-Date: 2020-04-20 15:18+0000\n"
 "Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports/"
 "indicator-power/sc/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
 
 #. TRANSLATORS: system power cord
@@ -192,7 +192,7 @@ msgstr "AB"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"
-msgstr "Cunfiguratziones de sa bateria"
+msgstr "Cunfig.  bateria"
 
 #: ../src/service.c:568
 msgid "Charge level"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2020-03-03 12:22+0000\n"
+"PO-Revision-Date: 2020-05-19 17:24+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "indicator-power/cs/>\n"
@@ -177,7 +177,7 @@ msgstr "(%.0lf%%)"
 
 #: ../src/notifier.c:286
 msgid "Battery Low"
-msgstr "Baterie je téměř vybitá"
+msgstr "Akumulátor je téměř vybitý"
 
 #: ../src/notifier.c:287
 msgid "Battery Critical"

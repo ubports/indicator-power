@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2020-07-03 14:50+0000\n"
+"PO-Revision-Date: 2020-07-03 16:03+0000\n"
 "Last-Translator: Tigran Khachatryan <tigrankhachatryan2008@gmail.com>\n"
 "Language-Team: Armenian <https://translate.ubports.com/projects/ubports/"
 "indicator-power/hy/>\n"
@@ -173,16 +173,16 @@ msgstr "(%.0lf%%)"
 
 #: ../src/notifier.c:286
 msgid "Battery Low"
-msgstr ""
+msgstr "Մարտկոցի մակարդակը ցածր է"
 
 #: ../src/notifier.c:287
 msgid "Battery Critical"
-msgstr ""
+msgstr "Շատ ցածր մարտկոցի մակարդակ"
 
 #: ../src/notifier.c:289
 #, c-format
 msgid "%.0f%% charge remaining"
-msgstr ""
+msgstr "Մնաց %.0f%% մարտկոցի մակարդակ"
 
 #: ../src/notifier.c:321
 msgid "OK"
@@ -190,7 +190,7 @@ msgstr "OK"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"
-msgstr ""
+msgstr "Մարտկոցի կարգավորումներ"
 
 #: ../src/service.c:568
 msgid "Charge level"
@@ -198,23 +198,23 @@ msgstr "Լիցքավորման մակարդակը"
 
 #: ../src/service.c:636
 msgid "Show Time in Menu Bar"
-msgstr ""
+msgstr "Ցույց տալ ժամանակը մենյուում"
 
 #: ../src/service.c:640
 msgid "Show Percentage in Menu Bar"
-msgstr ""
+msgstr "Ցույց տալ տոկոսը մենյու բարի վրա"
 
 #: ../src/service.c:644
 msgid "Power Settings…"
-msgstr ""
+msgstr "Էլեկտրաէներգիայի պարամետրեր…"
 
 #: ../src/service.c:670
 msgid "Adjust brightness automatically"
-msgstr ""
+msgstr "Ավտոմատ կառավարել էկրանի պայծառությունը"
 
 #: ../src/service.c:678
 msgid "Flashlight"
-msgstr ""
+msgstr "Խցիկի ֆլեշ"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"

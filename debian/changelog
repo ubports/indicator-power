@@ -1,3 +1,9 @@
+indicator-power (12.10.8+ubports2) xenial; urgency=medium
+
+  * Try to detect if flash needs to be enabled (latched) separately 
+
+ -- Florian Leeber <florian@ubports.com>  Wed, 15 Jul 2020 17:59:12 +0200
+
 indicator-power (12.10.8+ubports1) xenial; urgency=medium
 
   * Update Jenkinsfile

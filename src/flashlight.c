@@ -37,8 +37,9 @@ const char* const qcom_sysfs[] = {"/sys/class/leds/torch-light/brightness",
                                   "/sys/class/leds/torch-light1/brightness"};
 const char* qcom_torch_enable = "/sys/class/leds/led:switch/brightness";
 
-const size_t simple_sysfs_size = 1;
-const char* const simple_sysfs[] = {"/sys/class/flashlight_core/flashlight/flashlight_torch"};
+const size_t simple_sysfs_size = 2;
+const char* const simple_sysfs[] = {"/sys/class/flashlight_core/flashlight/flashlight_torch",
+                                    "/sys/class/leds/white:flash/brightness"};
 
 char* flash_sysfs_path = NULL;
 enum TorchType torch_type = SIMPLE;

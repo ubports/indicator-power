@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2019-04-14 00:00+0000\n"
+"PO-Revision-Date: 2020-08-23 12:56+0000\n"
 "Last-Translator: Aashrut <Aashrut99@gmail.com>\n"
 "Language-Team: Gujarati <https://translate.ubports.com/projects/ubports/"
 "indicator-power/gu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
 
 #. TRANSLATORS: system power cord
@@ -107,7 +107,7 @@ msgstr "%0d:%02d બાકી"
 #: ../src/device.c:681
 #, c-format
 msgid "%d %s %d %s to charge"
-msgstr "ચાર્જ થવામાં %d કલાક %s મિનિટ"
+msgstr "ચાર્જ થવામાં %d %s %d %s"
 
 #: ../src/device.c:682 ../src/device.c:700
 msgid "hour"
@@ -216,11 +216,11 @@ msgstr "બ્રાઈટનેસ આપમેળે સમયોજિત ક
 
 #: ../src/service.c:678
 msgid "Flashlight"
-msgstr ""
+msgstr "ફ્લેશલાઇટ"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"
-msgstr ""
+msgstr "ચેતવણી: ભારે ઉપયોગ એલઇડીને નુકસાન પહોંચાડે છે!"
 
 #: ../src/service.c:690
 msgid "Battery settings…"

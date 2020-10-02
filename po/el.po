@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2019-01-27 00:00+0000\n"
-"Last-Translator: Anastopoulos Theocharis <harris.anastopoulos@gmail.com>\n"
+"PO-Revision-Date: 2020-08-15 21:53+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
 "Language-Team: Greek <https://translate.ubports.com/projects/ubports/"
 "indicator-power/el/>\n"
 "Language: el\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
 
 #. TRANSLATORS: system power cord
@@ -68,7 +68,7 @@ msgstr "Αναπαραγωγέας πολυμέσων"
 #. TRANSLATORS: tablet device
 #: ../src/device.c:560
 msgid "Tablet"
-msgstr "Ταμπλέτα"
+msgstr "Tablet"
 
 #. TRANSLATORS: tablet device
 #: ../src/device.c:564
@@ -83,7 +83,7 @@ msgstr "Άγνωστο"
 #: ../src/device.c:608
 #, c-format
 msgid "estimating…"
-msgstr "εκτίμηση..."
+msgstr "εκτίμηση…"
 
 #: ../src/device.c:612
 #, c-format
@@ -94,7 +94,7 @@ msgstr "Άγνωστο"
 #: ../src/device.c:641
 #, c-format
 msgid "%0d:%02d to charge"
-msgstr "Υπολείπονται %0d:%02d για φόρτιση"
+msgstr "%0d:%02d για φόρτιση"
 
 #. TRANSLATORS: H:MM (hours, minutes) to discharge the battery. Example: "1:30 left"
 #: ../src/device.c:646
@@ -107,7 +107,7 @@ msgstr "Απομένουν %0d:%02d"
 #: ../src/device.c:681
 #, c-format
 msgid "%d %s %d %s to charge"
-msgstr "Υπολείπονται %d %s ώρα και %d %s λεπτά για φόρτιση"
+msgstr "%d %s και %d %s για φόρτιση"
 
 #: ../src/device.c:682 ../src/device.c:700
 msgid "hour"
@@ -127,27 +127,27 @@ msgstr[1] "λεπτά"
 #: ../src/device.c:689
 #, c-format
 msgid "%d %s to charge"
-msgstr "Υπολείπονται  %d %s λεπτά για φόρτιση"
+msgstr "%d %s για φόρτιση"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) left" until the battery's empty.
 #. Example: "1 hour 10 minutes left"
 #: ../src/device.c:699
 #, c-format
 msgid "%d %s %d %s left"
-msgstr "Απέμειναν %d %s ώρα και %d %s λεπτά"
+msgstr "Απέμειναν %d %s και %d %s"
 
 #. TRANSLATORS: "Y (minute,minutes) left" until the battery's empty.
 #. Example: "59 minutes left"
 #: ../src/device.c:707
 #, c-format
 msgid "%d %s left"
-msgstr "Απέμειναν %d %s λεπτά"
+msgstr "Απέμειναν %d %s"
 
 #. TRANSLATORS: example: "battery (charged)"
 #: ../src/device.c:764
 #, c-format
 msgid "%s (charged)"
-msgstr "%s (Φορτισμένη)"
+msgstr "%s (φορτισμένη)"
 
 #. TRANSLATORS: example: "battery (time remaining)"
 #: ../src/device.c:781
@@ -208,7 +208,7 @@ msgstr "Εμφάνιση ποσοστού στη μπάρα μενού"
 
 #: ../src/service.c:644
 msgid "Power Settings…"
-msgstr "Ρυθμίσεις ενέργειας..."
+msgstr "Ρυθμίσεις ενέργειας…"
 
 #: ../src/service.c:670
 msgid "Adjust brightness automatically"
@@ -216,12 +216,12 @@ msgstr "Αυτόματη ρύθμιση φωτεινότητας"
 
 #: ../src/service.c:678
 msgid "Flashlight"
-msgstr ""
+msgstr "Φακός"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"
-msgstr ""
+msgstr "Προειδοποίηση: Η βαριά χρήση μπορεί να προκαλέσει ζημιά στο LED!"
 
 #: ../src/service.c:690
 msgid "Battery settings…"
-msgstr "Ρυθμίσεις μπαταρίας..."
+msgstr "Ρυθμίσεις μπαταρίας…"

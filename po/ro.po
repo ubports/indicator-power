@@ -8,17 +8,18 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2014-03-16 11:02+0000\n"
-"Last-Translator: Marian Vasile <marianvasile1972@gmail.com>\n"
-"Language-Team: Romanian <ro@li.org>\n"
+"PO-Revision-Date: 2020-11-03 11:19+0000\n"
+"Last-Translator: Mihai <michael.mozart@protonmail.com>\n"
+"Language-Team: Romanian <https://translate.ubports.com/projects/ubports/"
+"indicator-power/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
-"== 0) && (n != 0))) ? 2: 1));\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:524
@@ -190,7 +191,7 @@ msgstr "%.0f%% a mai rămas de încărcat"
 
 #: ../src/notifier.c:321
 msgid "OK"
-msgstr "În regulă"
+msgstr "Ok"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"

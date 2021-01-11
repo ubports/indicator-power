@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2020-12-31 16:31+0000\n"
+"PO-Revision-Date: 2021-01-06 01:37+0000\n"
 "Last-Translator: GK <miscgk@pm.me>\n"
 "Language-Team: Tamil <https://translate.ubports.com/projects/ubports/"
 "indicator-power/ta/>\n"
@@ -68,7 +68,7 @@ msgstr "ஊடக இயக்கி"
 #. TRANSLATORS: tablet device
 #: ../src/device.c:560
 msgid "Tablet"
-msgstr "வரைபட்டிகை (Tablet)"
+msgstr "வரைப்பட்டிகை (Tablet)"
 
 #. TRANSLATORS: tablet device
 #: ../src/device.c:564

@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2016-01-11 09:37+0000\n"
-"Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
-"Language-Team: Hungarian <hu@li.org>\n"
+"PO-Revision-Date: 2021-01-28 03:24+0000\n"
+"Last-Translator: Adam <padamyno@gmail.com>\n"
+"Language-Team: Hungarian <https://translate.ubports.com/projects/ubports/"
+"indicator-power/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:524
@@ -87,19 +88,19 @@ msgstr "becslés…"
 #: ../src/device.c:612
 #, c-format
 msgid "unknown"
-msgstr "ismeretlen"
+msgstr "Ismeretlen"
 
 #. TRANSLATORS: H:MM (hours, minutes) to charge the battery. Example: "1:30 to charge"
 #: ../src/device.c:641
 #, c-format
 msgid "%0d:%02d to charge"
-msgstr "%0d.%02d a feltöltésig"
+msgstr "%0d.%02d a teljes töltöttségig"
 
 #. TRANSLATORS: H:MM (hours, minutes) to discharge the battery. Example: "1:30 left"
 #: ../src/device.c:646
 #, c-format
 msgid "%0d:%02d left"
-msgstr "%0d.%02d van hátra"
+msgstr "%0d.%02d töltöttség maradt"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) to charge" the battery.
 #. Example: "1 hour 10 minutes to charge"
@@ -133,14 +134,14 @@ msgstr "%d %s a feltöltésig"
 #: ../src/device.c:699
 #, c-format
 msgid "%d %s %d %s left"
-msgstr "%d %s %d %s van hátra"
+msgstr "%d %s %d %s töltöttség maradt"
 
 #. TRANSLATORS: "Y (minute,minutes) left" until the battery's empty.
 #. Example: "59 minutes left"
 #: ../src/device.c:707
 #, c-format
 msgid "%d %s left"
-msgstr "%d %s van hátra"
+msgstr "%d %s töltöttség maradt"
 
 #. TRANSLATORS: example: "battery (charged)"
 #: ../src/device.c:764
@@ -191,7 +192,7 @@ msgstr "OK"
 
 #: ../src/notifier.c:322
 msgid "Battery settings"
-msgstr "Beállítások"
+msgstr "Akkumulátor beállítások"
 
 #: ../src/service.c:568
 msgid "Charge level"
@@ -199,11 +200,11 @@ msgstr "Töltöttségi szint"
 
 #: ../src/service.c:636
 msgid "Show Time in Menu Bar"
-msgstr "Idő megjelenítése a menüsávban"
+msgstr "Idő megjelenítése a menüsávon"
 
 #: ../src/service.c:640
 msgid "Show Percentage in Menu Bar"
-msgstr "Százalék megjelenítése a menüsávban"
+msgstr "Százalék megjelenítése a menüsávon"
 
 #: ../src/service.c:644
 msgid "Power Settings…"
@@ -211,16 +212,16 @@ msgstr "Energiabeállítások…"
 
 #: ../src/service.c:670
 msgid "Adjust brightness automatically"
-msgstr "Fényerő állítása automatikusan"
+msgstr "Automatikus fényerősség szabályzás"
 
 #: ../src/service.c:678
 msgid "Flashlight"
-msgstr ""
+msgstr "Zseblámpa"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"
-msgstr ""
+msgstr "Figyelem: Sokáig tartó használat károsíthatja a LED-et!"
 
 #: ../src/service.c:690
 msgid "Battery settings…"
-msgstr "Akkumulátorbeállítások…"
+msgstr "Akkumulátor beállításai…"

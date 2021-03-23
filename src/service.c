@@ -1096,8 +1096,9 @@ on_devices_changed (IndicatorPowerService * self)
 {
   priv_t * p = self->priv;
 
+  g_debug("on_devices_changed...");
   /* update the device list */
-  g_list_free_full (p->devices, (GDestroyNotify)g_object_unref);
+  g_list_free_full(p->devices, (GDestroyNotify)g_object_unref);
   p->devices = indicator_power_device_provider_get_devices (p->device_provider);
 
   /* update the primary device */
@@ -1476,6 +1477,7 @@ create_totalled_battery_device (const GList * devices)
                                            state,
                                            time_left,
                                            TRUE);
+      g_debug("Created a totalled device with %d percent, %d state", percent, state);
     }
 
   return device;
@@ -1522,7 +1524,9 @@ indicator_power_service_choose_primary_device (GList * devices)
       GList * tmp = merge_batteries_together (devices);
       tmp = g_list_sort (tmp, device_compare_func);
       primary = g_object_ref (tmp->data);
-      g_list_free_full (tmp, (GDestroyNotify)g_object_unref);
+      g_debug("Primary device selected: %s",
+              indicator_power_device_get_object_path(primary));
+      g_list_free_full(tmp, (GDestroyNotify)g_object_unref);
     }
 
   return primary;

@@ -171,8 +171,8 @@ update_device_from_object_path (IndicatorPowerDeviceProviderUPower * self,
   /* Symbolic composite item. Nice idea! But its composite rules
      differ from Design's so (for now) don't use it.
      https://wiki.ubuntu.com/Power#Handling_multiple_batteries */
-  if (!g_strcmp0(path, DISPLAY_DEVICE_PATH))
-    return;
+  //if (!g_strcmp0(path, DISPLAY_DEVICE_PATH))
+  //  return;
 
   data = g_slice_new (struct device_get_all_data);
   data->path = g_strdup (path);

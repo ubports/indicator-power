@@ -44,6 +44,12 @@ indicator_power_device_provider_default_init (IndicatorPowerDeviceProviderInterf
       G_TYPE_NONE, 0);
 }
 
+static gint
+_compare_devices_by_path (IndicatorPowerDevice * ca,
+    IndicatorPowerDevice * cb) {
+  return g_ascii_strcasecmp (indicator_power_device_get_object_path(ca), indicator_power_device_get_object_path(cb));
+}
+
 /***
 ****  PUBLIC API
 ***/
@@ -60,9 +66,9 @@ indicator_power_device_provider_default_init (IndicatorPowerDeviceProviderInterf
  *               list of devices
  */
 GList *
-indicator_power_device_provider_get_devices (IndicatorPowerDeviceProvider * self)
+indicator_power_device_provider_get_devices (IndicatorPowerDeviceProvider * self, GList * blacklistedDevices)
 {
-  GList * devices;
+  GList * devices, * sanitizedDevices;
   IndicatorPowerDeviceProviderInterface * iface;
 
   g_return_val_if_fail (INDICATOR_IS_POWER_DEVICE_PROVIDER (self), NULL);
@@ -73,7 +79,19 @@ indicator_power_device_provider_get_devices (IndicatorPowerDeviceProvider * self
   else
     devices = NULL;
 
-  return devices;
+  //Check for any device that are blacklisted because they deliver faulty data
+  if (blacklistedDevices != NULL && devices != NULL) {
+      for (l=devices; l!=NULL; l=l->next) {
+        if (!g_list_find_custom(blacklistedDevices, l->data, (GCompareFunc))) {
+          sanitizedDevices = g_list_append (sanitizedDevices, g_object_ref(l->data));
+        }
+      }
+  } else {
+    sanitizedDevices = g_list_copy (devices);
+      g_list_foreach (sanitizedDevices, (GFunc)g_object_ref, NULL);
+  }
+
+  return sanitizedDevices;
 }
 
 /**

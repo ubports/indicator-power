@@ -123,6 +123,7 @@ struct _IndicatorPowerServicePrivate
 
   IndicatorPowerDevice * primary_device;
   GList * devices; /* IndicatorPowerDevice */
+  GList * blacklistedDevices;
 
   IndicatorPowerDeviceProvider * device_provider;
   IndicatorPowerNotifier * notifier;
@@ -1098,7 +1099,7 @@ on_devices_changed (IndicatorPowerService * self)
 
   /* update the device list */
   g_list_free_full (p->devices, (GDestroyNotify)g_object_unref);
-  p->devices = indicator_power_device_provider_get_devices (p->device_provider);
+  p->devices = indicator_power_device_provider_get_devices (p->device_provider, p->blacklistedDevices);
 
   /* update the primary device */
   g_clear_object (&p->primary_device);
@@ -1392,7 +1393,7 @@ indicator_power_service_set_notifier (IndicatorPowerService  * self,
    the aggregated time remaining should be the maximum of the times
    for all those that are discharging, plus the sum of the times
    for all those that are idle. Otherwise, the aggregated time remaining
-   should be the the maximum of the times for all those that are charging. */
+   should be the maximum of the times for all those that are charging. */
 static IndicatorPowerDevice *
 create_totalled_battery_device (const GList * devices)
 {

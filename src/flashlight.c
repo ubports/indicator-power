@@ -26,8 +26,8 @@
 
 #define QCOM_ENABLE "255"
 #define QCOM_DISABLE "0"
-#define SIMPLE_ENABLE "1"
-#define SIMPLE_DISABLE "0"
+#define SIMPLE_ENABLE 1
+#define SIMPLE_DISABLE 0
 
 const size_t qcom_sysfs_size = 7;
 const char* const qcom_sysfs[] = {"/sys/class/leds/torch-light/brightness",
@@ -41,12 +41,17 @@ const size_t qcom_switch_size = 2;
 const char* const qcom_switch[] = {"/sys/class/leds/led:switch/brightness",
                                    "/sys/class/leds/led:switch_0/brightness"};
 
-const size_t simple_sysfs_size = 2;
+const size_t simple_sysfs_size = 3;
 const char* const simple_sysfs[] = {"/sys/class/flashlight_core/flashlight/flashlight_torch",
-                                    "/sys/class/leds/white:flash/brightness"};
+                                    "/sys/class/leds/white:flash/brightness",
+                                    "/sys/class/leds/torch-sec1/brightness"};  // Samsung herolte (Exynos8890)
+
+const size_t max_sysfs_size = 1;
+const char* const max_sysfs[] = {"/sys/class/leds/torch-sec1/max_brightness"};  // Samsung herolte (Exynos8890)
 
 char* flash_sysfs_path = NULL;
 char* qcom_switch_path = NULL;
+char* max_flash_sysfs_path = NULL;
 
 enum TorchType torch_type = SIMPLE;
 gboolean activated = 0;
@@ -54,6 +59,14 @@ gboolean activated = 0;
 int
 set_sysfs_path()
 {
+  // Test if a maximum brightness file exists
+  for (size_t i = 0; i < max_sysfs_size; i++) {
+    if (access(max_sysfs[i], F_OK ) != -1){
+      max_flash_sysfs_path = max_sysfs[i];
+    }
+  }
+
+  // Test if QCOM files exists
   for (size_t i = 0; i < qcom_sysfs_size; i++) {
     if (access(qcom_sysfs[i], F_OK ) != -1){
         flash_sysfs_path = qcom_sysfs[i];
@@ -66,6 +79,8 @@ set_sysfs_path()
         return 1;
     }
   }
+
+  // Test if simple files exists
   for (size_t i = 0; i < simple_sysfs_size; i++) {
     if (access(simple_sysfs[i], F_OK ) != -1){
         flash_sysfs_path = simple_sysfs[i];
@@ -114,10 +129,26 @@ int
 toggle_flashlight_action_simple()
 {
   FILE *fd = NULL;
+  FILE *fd_max = NULL;
+  int brightness = SIMPLE_ENABLE;
 
   fd = fopen(flash_sysfs_path, "w");
   if (fd != NULL) {
-    fprintf(fd, activated ? SIMPLE_DISABLE : SIMPLE_ENABLE);
+    // Set brightness to maximum if file exists
+    if ( max_flash_sysfs_path != NULL) {
+      fd_max =  fopen(max_flash_sysfs_path, "r");
+      if (fd_max != NULL) {
+        // TODO: Add a brightness parameter to the torch. For now just scale SIMPLE_ENABLE value
+        fscanf(fd_max, "%d", &brightness);
+        brightness = SIMPLE_ENABLE * brightness;
+        fclose(fd_max);
+      } else {
+        return 0;
+      }
+    }
+      
+    // SIMPLE_ENABLE otherwise
+    fprintf(fd, "%d", activated ? SIMPLE_DISABLE : brightness);
     fclose(fd);
     return 1;
   }

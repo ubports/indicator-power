@@ -860,7 +860,7 @@ indicator_power_device_get_readable_title (const IndicatorPowerDevice * device,
   else if (want_percent)
     {
       /* TRANSLATORS: after the icon, a battery %. Example: "(33%)" */
-      str = g_strdup_printf (_("(%.0lf%%)"), p->percentage);
+      str = g_strdup_printf (_("%.0lf%%"), p->percentage);
     }
   else
     {

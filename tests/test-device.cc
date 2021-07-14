@@ -586,7 +586,7 @@ TEST_F(DeviceTest, Labels)
   check_label (device, "Battery (1:01 to charge)");
   check_header (device, "(1:01, 50%)",
                         "(1:01)",
-                        "(50%)",
+                        "50%",
                         "Battery (1 hour 1 minute to charge)");
 
   // discharging, < 12 hours left
@@ -598,7 +598,7 @@ TEST_F(DeviceTest, Labels)
   check_label (device, "Battery (1:01 left)");
   check_header (device, "(1:01, 50%)",
                         "(1:01)",
-                        "(50%)",
+                        "50%",
                         "Battery (1 hour 1 minute left)");
 
   // discharging, > 24 hours left
@@ -609,9 +609,9 @@ TEST_F(DeviceTest, Labels)
                    INDICATOR_POWER_DEVICE_TIME, guint64(60*60*25),
                    NULL);
   check_label (device, "Battery");
-  check_header (device, "(50%)",
+  check_header (device, "50%",
                         NULL,
-                        "(50%)",
+                        "50%",
                         "Battery");
 
 // fully charged
@@ -621,9 +621,9 @@ TEST_F(DeviceTest, Labels)
                    INDICATOR_POWER_DEVICE_TIME, guint64(0),
                    NULL);
   check_label (device, "Battery (charged)");
-  check_header (device, "(100%)",
+  check_header (device, "100%",
                         NULL,
-                        "(100%)",
+                        "100%",
                         "Battery (charged)");
 
   // percentage but no time estimate
@@ -635,7 +635,7 @@ TEST_F(DeviceTest, Labels)
   check_label (device, "Battery (estimating…)");
   check_header (device, "(estimating…, 50%)",
                         "(estimating…)",
-                        "(50%)",
+                        "50%",
                         "Battery (estimating…)");
 
   // no percentage, no time estimate
@@ -705,7 +705,7 @@ TEST_F(DeviceTest, Inestimable___this_takes_80_seconds)
           check_label (device, "Battery (estimating…)");
           check_header (device, "(estimating…, 50%)",
                                 "(estimating…)",
-                                "(50%)",
+                                "50%",
                                 "Battery (estimating…)");
         }
       else if (elapsed < 60)
@@ -713,15 +713,15 @@ TEST_F(DeviceTest, Inestimable___this_takes_80_seconds)
           check_label (device, "Battery (unknown)");
           check_header (device, "(unknown, 50%)",
                                 "(unknown)",
-                                "(50%)",
+                                "50%",
                                 "Battery (unknown)");
         }
       else if (elapsed < 80)
         {
           check_label (device, "Battery");
-          check_header (device, "(50%)",
+          check_header (device, "50%",
                                 NULL,
-                                "(50%)",
+                                "50%",
                                 "Battery");
         }
       else

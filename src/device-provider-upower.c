@@ -109,6 +109,7 @@ on_get_all_response (GObject * o, GAsyncResult * res, gpointer gdata)
     {
       guint32 kind = 0;
       guint32 state = 0;
+      guint32 technology = 0;
       gdouble percentage = 0;
       gint64 time_to_empty = 0;
       gint64 time_to_full = 0;
@@ -120,6 +121,7 @@ on_get_all_response (GObject * o, GAsyncResult * res, gpointer gdata)
 
       g_variant_lookup (dict, "Type", "u", &kind);
       g_variant_lookup (dict, "State", "u", &state);
+      g_variant_lookup (dict, "Technology", "u", &technology);
       g_variant_lookup (dict, "Percentage", "d", &percentage);
       g_variant_lookup (dict, "TimeToEmpty", "x", &time_to_empty);
       g_variant_lookup (dict, "TimeToFull", "x", &time_to_full);
@@ -130,6 +132,7 @@ on_get_all_response (GObject * o, GAsyncResult * res, gpointer gdata)
         {
           g_object_set (device, INDICATOR_POWER_DEVICE_KIND, (gint)kind,
                                 INDICATOR_POWER_DEVICE_STATE, (gint)state,
+                                INDICATOR_POWER_DEVICE_TECHNOLOGY, (gint)technology,
                                 INDICATOR_POWER_DEVICE_OBJECT_PATH, data->path,
                                 INDICATOR_POWER_DEVICE_PERCENTAGE, percentage,
                                 INDICATOR_POWER_DEVICE_TIME, time,
@@ -142,6 +145,7 @@ on_get_all_response (GObject * o, GAsyncResult * res, gpointer gdata)
                                                kind,
                                                percentage,
                                                state,
+                                               technology,
                                                (time_t)time,
                                                power_supply);
 

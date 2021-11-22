@@ -205,12 +205,14 @@ TEST_F(DeviceTest, New)
                                                               UP_DEVICE_KIND_BATTERY,
                                                               50.0,
                                                               UP_DEVICE_STATE_CHARGING,
+                                                              UP_DEVICE_TECHNOLOGY_LIPOL,
                                                               30,
                                                               TRUE);
   ASSERT_TRUE (device != NULL);
   ASSERT_TRUE (INDICATOR_IS_POWER_DEVICE(device));
   ASSERT_EQ (UP_DEVICE_KIND_BATTERY, indicator_power_device_get_kind(device));
   ASSERT_EQ (UP_DEVICE_STATE_CHARGING, indicator_power_device_get_state(device));
+  ASSERT_EQ (UP_DEVICE_TECHNOLOGY_LIPOL, indicator_power_device_get_technology(device));
   ASSERT_STREQ ("/object/path", indicator_power_device_get_object_path(device));
   ASSERT_EQ (50, int(indicator_power_device_get_percentage(device)));
   ASSERT_EQ (30, indicator_power_device_get_time(device));
@@ -222,12 +224,13 @@ TEST_F(DeviceTest, New)
 
 TEST_F(DeviceTest, NewFromVariant)
 {
-  auto variant = g_variant_new("(susdutb)",
+  auto variant = g_variant_new("(susduutb)",
                                "/object/path",
                                guint32(UP_DEVICE_KIND_BATTERY),
                                "icon",
                                50.0,
                                guint32(UP_DEVICE_STATE_CHARGING),
+                               guint32(UP_DEVICE_TECHNOLOGY_LIPOL),
                                guint64(30),
                                TRUE);
   IndicatorPowerDevice * device = indicator_power_device_new_from_variant (variant);
@@ -236,6 +239,7 @@ TEST_F(DeviceTest, NewFromVariant)
   ASSERT_TRUE (INDICATOR_IS_POWER_DEVICE(device));
   ASSERT_EQ (UP_DEVICE_KIND_BATTERY, indicator_power_device_get_kind(device));
   ASSERT_EQ (UP_DEVICE_STATE_CHARGING, indicator_power_device_get_state(device));
+  ASSERT_EQ (UP_DEVICE_TECHNOLOGY_LIPOL, indicator_power_device_get_technology(device));
   ASSERT_STREQ ("/object/path", indicator_power_device_get_object_path(device));
   ASSERT_EQ (50, int(indicator_power_device_get_percentage(device)));
   ASSERT_EQ (30, indicator_power_device_get_time(device));
@@ -804,6 +808,35 @@ namespace
 
   /**
   **/
+  const std::array<std::pair<std::string,UpDeviceTechnology>,UP_DEVICE_TECHNOLOGY_LAST> technologies =
+  {
+    std::make_pair("unknown", UP_DEVICE_TECHNOLOGY_UNKNOWN),
+    std::make_pair("liion", UP_DEVICE_TECHNOLOGY_LIION),
+    std::make_pair("lipol", UP_DEVICE_TECHNOLOGY_LIPOL),
+    std::make_pair("fepo", UP_DEVICE_TECHNOLOGY_FEPO),
+    std::make_pair("pb", UP_DEVICE_TECHNOLOGY_PB),
+    std::make_pair("nicd", UP_DEVICE_TECHNOLOGY_NICD),
+    std::make_pair("nimh", UP_DEVICE_TECHNOLOGY_NIMH)
+  };
+  const std::string& technology2str(UpDeviceTechnology technology)
+  {
+    return std::find_if(
+      technologies.begin(),
+      technologies.end(),
+      [technology](decltype(technologies[0])& i){return i.second==technology;}
+    )->first;
+  }
+  UpDeviceTechnology str2technology(const std::string& str)
+  {
+    return std::find_if(
+      technologies.begin(),
+      technologies.end(),
+      [str](decltype(technologies[0])& i){return i.first==str;}
+    )->second;
+  }
+
+  /**
+  **/
 
   std::string device2str(IndicatorPowerDevice* device)
   {
@@ -812,6 +845,7 @@ namespace
 
     o << kind2str(indicator_power_device_get_kind(device))
       << ' ' << state2str(indicator_power_device_get_state(device))
+      << ' ' << technology2str(indicator_power_device_get_technology(device))
       << ' ' << indicator_power_device_get_time(device)<<'m'
       << ' ' << int(ceil(indicator_power_device_get_percentage(device)))<<'%'
       << ' ' << (path ? path : "nopath")
@@ -823,14 +857,15 @@ namespace
   IndicatorPowerDevice* str2device(const std::string& str)
   {
     auto tokens = g_strsplit(str.c_str(), " ", 0);
-    g_assert(6u == g_strv_length(tokens));
+    g_assert(7u == g_strv_length(tokens));
     const auto kind = str2kind(tokens[0]);
     const auto state = str2state(tokens[1]);
-    const time_t time = atoi(tokens[2]);
-    const double pct = strtod(tokens[3],nullptr);
-    const char* path = !g_strcmp0(tokens[4],"nopath") ? nullptr : tokens[4];
-    const gboolean power_supply = atoi(tokens[5]);
-    auto ret = indicator_power_device_new(path, kind, pct, state, time, power_supply);
+    const auto technology = str2technology(tokens[2]);
+    const time_t time = atoi(tokens[3]);
+    const double pct = strtod(tokens[4],nullptr);
+    const char* path = !g_strcmp0(tokens[5],"nopath") ? nullptr : tokens[5];
+    const gboolean power_supply = atoi(tokens[6]);
+    auto ret = indicator_power_device_new(path, kind, pct, state, technology, time, power_supply);
     g_strfreev(tokens);
     return ret;
   }
@@ -853,100 +888,105 @@ TEST_F(DeviceTest, ChoosePrimary)
   } tests[] = {
     {
       "one discharging battery",
-      "battery discharging 10m 60% bat01 1",
-      { "battery discharging 10m 60% bat01 1" }
+      "battery discharging lipol 10m 60% bat01 1",
+      { "battery discharging lipol 10m 60% bat01 1" }
     },
     {
       "merge two discharging batteries",
-      "battery discharging 20m 70% nopath 1",
-      { "battery discharging 10m 60% bat01 1", "battery discharging 20m 80% bat02 1" }
+      "battery discharging unknown 20m 70% nopath 1",
+      { "battery discharging lipol 10m 60% bat01 1", "battery discharging lipol 20m 80% bat02 1" }
     },
     {
       "merge two other discharging batteries",
-      "battery discharging 30m 90% nopath 1",
-      { "battery discharging 20m 80% bat01 1", "battery discharging 30m 100% bat02 1" }
+      "battery discharging unknown 30m 90% nopath 1",
+      { "battery discharging lipol 20m 80% bat01 1", "battery discharging lipol 30m 100% bat02 1" }
     },
     {
       "merge three discharging batteries",
-      "battery discharging 30m 80% nopath 1",
-      { "battery discharging 10m 60% bat01 1", "battery discharging 20m 80% bat02 1", "battery discharging 30m 100% bat03 1" }
+      "battery discharging unknown 30m 80% nopath 1",
+      { "battery discharging lipol 10m 60% bat01 1", "battery discharging lipol 20m 80% bat02 1", "battery discharging lipol 30m 100% bat03 1" }
     },
     {
       "one charging battery",
-      "battery charging 10m 60% bat01 1",
-      { "battery charging 10m 60% bat01 1" }
+      "battery charging lipol 10m 60% bat01 1",
+      { "battery charging lipol 10m 60% bat01 1" }
     },
     {
       "merge two charging batteries",
-      "battery charging 20m 70% nopath 1",
-      { "battery charging 10m 60% bat01 1", "battery charging 20m 80% bat02 1" }
+      "battery charging unknown 20m 70% nopath 1",
+      { "battery charging lipol 10m 60% bat01 1", "battery charging lipol 20m 80% bat02 1" }
     },
     {
       "merge two other charging batteries",
-      "battery charging 30m 90% nopath 1",
-      { "battery charging 20m 80% bat01 1", "battery charging 30m 100% bat02 1" }
+      "battery charging unknown 30m 90% nopath 1",
+      { "battery charging lipol 20m 80% bat01 1", "battery charging lipol 30m 100% bat02 1" }
     },
     {
       "merge three charging batteries",
-      "battery charging 30m 80% nopath 1",
-      { "battery charging 10m 60% bat01 1", "battery charging 20m 80% bat02 1", "battery charging 30m 100% bat03 1" }
+      "battery charging unknown 30m 80% nopath 1",
+      { "battery charging lipol 10m 60% bat01 1", "battery charging lipol 20m 80% bat02 1", "battery charging lipol 30m 100% bat03 1" }
     },
     {
       "one charged battery",
-      "battery charged 0m 100% bat01 1",
-      { "battery charged 0m 100% bat01 1" }
+      "battery charged lipol 0m 100% bat01 1",
+      { "battery charged lipol 0m 100% bat01 1" }
     },
     {
       "merge one charged, one discharging",
-      "battery discharging 10m 80% nopath 1",
-      { "battery charged 0m 100% bat01 1", "battery discharging 10m 60% bat02 1" }
+      "battery discharging unknown 10m 80% nopath 1",
+      { "battery charged lipol 0m 100% bat01 1", "battery discharging lipol 10m 60% bat02 1" }
     },
     {
       "merged one charged, one charging",
-      "battery charging 10m 80% nopath 1",
-      { "battery charged 0m 100% bat01 1", "battery charging 10m 60% bat02 1" }
+      "battery charging unknown 10m 80% nopath 1",
+      { "battery charged lipol 0m 100% bat01 1", "battery charging lipol 10m 60% bat02 1" }
     },
     {
       "merged one charged, one charging, one discharging",
-      "battery discharging 10m 74% nopath 1",
-      { "battery charged 0m 100% bat01 1", "battery charging 10m 60% bat02 1", "battery discharging 10m 60% bat03 1" }
+      "battery discharging unknown 10m 74% nopath 1",
+      { "battery charged lipol 0m 100% bat01 1", "battery charging lipol 10m 60% bat02 1", "battery discharging lipol 10m 60% bat03 1" }
     },
     {
       "one discharging mouse and one discharging battery. ignore mouse because it doesn't supply the power",
-      "battery discharging 10m 60% bat01 1",
-      { "battery discharging 10m 60% bat01 1", "mouse discharging 20m 80% mouse01 0" }
+      "battery discharging lipol 10m 60% bat01 1",
+      { "battery discharging lipol 10m 60% bat01 1", "mouse discharging unknown 20m 80% mouse01 0" }
     },
     {
       "one discharging mouse and a different discharging battery. ignore mouse because it doesn't supply the power",
-      "battery discharging 30m 100% bat01 1",
-      { "battery discharging 30m 100% bat01 1", "mouse discharging 20m 80% mouse01 0" }
+      "battery discharging lipol 30m 100% bat01 1",
+      { "battery discharging lipol 30m 100% bat01 1", "mouse discharging unknown 20m 80% mouse01 0" }
     },
     {
       "everything comes before power lines #1",
-      "battery discharging 10m 60% bat01 1",
-      { "battery discharging 10m 60% bat01 1", "line-power unknown 0m 0% lp01 1" }
+      "battery discharging lipol 10m 60% bat01 1",
+      { "battery discharging lipol 10m 60% bat01 1", "line-power unknown unknown 0m 0% lp01 1" }
     },
     {
       "everything comes before power lines #2",
-      "battery charging 10m 60% bat01 1",
-      { "battery charging 10m 60% bat01 1", "line-power unknown 0m 0% lp01 1" }
+      "battery charging lipol 10m 60% bat01 1",
+      { "battery charging lipol 10m 60% bat01 1", "line-power unknown unknown 0m 0% lp01 1" }
     },
     {
       "everything comes before power lines #3 except that the mouse doesn't supply the power",
-      "line-power unknown 0m 0% lp01 1",
-      { "mouse discharging 20m 80% mouse01 0", "line-power unknown 0m 0% lp01 1" }
+      "line-power unknown unknown 0m 0% lp01 1",
+      { "mouse discharging unknown 20m 80% mouse01 0", "line-power unknown unknown 0m 0% lp01 1" }
     },
     {
       // https://bugs.launchpad.net/ubuntu/+source/indicator-power/+bug/1470080/comments/10
       "don't select a device with unknown state when we have another device with a known state...",
-      "battery charged 0m 100% bat01 1",
-      { "battery charged 0m 100% bat01 1", "phone unknown 0m 61% phone01 1" }
+      "battery charged lipol 0m 100% bat01 1",
+      { "battery charged lipol 0m 100% bat01 1", "phone unknown unknown 0m 61% phone01 1" }
     },
     {
       // https://bugs.launchpad.net/ubuntu/+source/indicator-power/+bug/1470080/comments/10
       "...but do select the unknown state device if nothing else is available",
-      "phone unknown 0m 61% phone01 1",
-      { "phone unknown 0m 61% phone01 1" }
+      "phone unknown unknown 0m 61% phone01 1",
+      { "phone unknown unknown 0m 61% phone01 1" }
+    },
+    {
+      "don't merge unknown technology batteries",
+      "battery charging lipol 10m 70% bat01 1",
+      { "battery charging lipol 10m 70% bat01 1", "battery charging unknown 20m 60% unk01 1" }
     }
   };
   

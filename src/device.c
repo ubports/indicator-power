@@ -34,6 +34,7 @@ struct _IndicatorPowerDevicePrivate
 {
   UpDeviceKind kind;
   UpDeviceState state;
+  UpDeviceTechnology technology;
   gchar * object_path;
   gdouble percentage;
   time_t time;
@@ -51,6 +52,7 @@ enum {
   PROP_0,
   PROP_KIND,
   PROP_STATE,
+  PROP_TECHNOLOGY,
   PROP_OBJECT_PATH,
   PROP_PERCENTAGE,
   PROP_TIME,
@@ -98,6 +100,13 @@ indicator_power_device_class_init (IndicatorPowerDeviceClass *klass)
                                              UP_DEVICE_STATE_UNKNOWN,
                                              G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
 
+  properties[PROP_TECHNOLOGY] = g_param_spec_int (INDICATOR_POWER_DEVICE_TECHNOLOGY,
+                                                  "technology",
+                                                  "The device's UpDeviceTechnology",
+                                                  UP_DEVICE_TECHNOLOGY_UNKNOWN, UP_DEVICE_TECHNOLOGY_LAST,
+                                                  UP_DEVICE_TECHNOLOGY_UNKNOWN,
+                                                  G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+
   properties[PROP_OBJECT_PATH] = g_param_spec_string (INDICATOR_POWER_DEVICE_OBJECT_PATH,
                                                       "object path",
                                                       "The device's DBus object path",
@@ -137,6 +146,7 @@ indicator_power_device_init (IndicatorPowerDevice *self)
                                             IndicatorPowerDevicePrivate);
   priv->kind = UP_DEVICE_KIND_UNKNOWN;
   priv->state = UP_DEVICE_STATE_UNKNOWN;
+  priv->technology = UP_DEVICE_TECHNOLOGY_UNKNOWN;
   priv->object_path = NULL;
   priv->percentage = 0.0;
   priv->time = 0;
@@ -187,6 +197,10 @@ get_property (GObject * o, guint  prop_id, GValue * value, GParamSpec * pspec)
         g_value_set_int (value, priv->state);
         break;
 
+      case PROP_TECHNOLOGY:
+        g_value_set_int (value, priv->technology);
+        break;
+
       case PROP_OBJECT_PATH:
         g_value_set_string (value, priv->object_path);
         break;
@@ -223,6 +237,10 @@ set_property (GObject * o, guint prop_id, const GValue * value, GParamSpec * psp
 
       case PROP_STATE:
         p->state = (UpDeviceState) g_value_get_int (value);
+        break;
+
+      case PROP_TECHNOLOGY:
+        p->technology = (UpDeviceTechnology) g_value_get_int (value);
         break;
 
       case PROP_OBJECT_PATH:
@@ -289,6 +307,16 @@ indicator_power_device_get_state (const IndicatorPowerDevice * device)
   /* LCOV_EXCL_STOP */
 
   return device->priv->state;
+}
+
+UpDeviceTechnology
+indicator_power_device_get_technology (const IndicatorPowerDevice * device)
+{
+  /* LCOV_EXCL_START */
+  g_return_val_if_fail (INDICATOR_IS_POWER_DEVICE(device), UP_DEVICE_TECHNOLOGY_UNKNOWN);
+  /* LCOV_EXCL_STOP */
+
+  return device->priv->technology;
 }
 
 const gchar *
@@ -894,12 +922,14 @@ indicator_power_device_new (const gchar * object_path,
                             UpDeviceKind  kind,
                             gdouble percentage,
                             UpDeviceState state,
+                            UpDeviceTechnology technology,
                             time_t timestamp,
                             gboolean power_supply)
 {
   GObject * o = g_object_new (INDICATOR_POWER_DEVICE_TYPE,
     INDICATOR_POWER_DEVICE_KIND, kind,
     INDICATOR_POWER_DEVICE_STATE, state,
+    INDICATOR_POWER_DEVICE_TECHNOLOGY, technology,
     INDICATOR_POWER_DEVICE_OBJECT_PATH, object_path,
     INDICATOR_POWER_DEVICE_PERCENTAGE, percentage,
     INDICATOR_POWER_DEVICE_TIME, (guint64)timestamp,
@@ -911,22 +941,24 @@ indicator_power_device_new (const gchar * object_path,
 IndicatorPowerDevice *
 indicator_power_device_new_from_variant (GVariant * v)
 {
-  g_return_val_if_fail (g_variant_is_of_type (v, G_VARIANT_TYPE("(susdutb)")), NULL);
+  g_return_val_if_fail (g_variant_is_of_type (v, G_VARIANT_TYPE("(susduutb)")), NULL);
 
   UpDeviceKind kind = UP_DEVICE_KIND_UNKNOWN;
   UpDeviceState state = UP_DEVICE_STATE_UNKNOWN;
+  UpDeviceTechnology technology = UP_DEVICE_TECHNOLOGY_UNKNOWN;
   const gchar * icon = NULL;
   const gchar * object_path = NULL;
   gdouble percentage = 0;
   guint64 time = 0;
   gboolean power_supply = FALSE;
 
-  g_variant_get (v, "(&su&sdutb)",
+  g_variant_get (v, "(&su&sduutb)",
                  &object_path,
                  &kind,
                  &icon,
                  &percentage,
                  &state,
+                 &technology,
                  &time,
                  &power_supply);
 
@@ -934,6 +966,7 @@ indicator_power_device_new_from_variant (GVariant * v)
                                      kind,
                                      percentage,
                                      state,
+                                     technology,
                                      (time_t)time,
                                      power_supply);
 }

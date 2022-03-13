@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2021-05-23 05:10+0000\n"
+"PO-Revision-Date: 2021-10-10 19:08+0000\n"
 "Last-Translator: Wannaphong Phatthiyaphaibun <wannaphong@yahoo.com>\n"
 "Language-Team: Thai <https://translate.ubports.com/projects/ubports/"
 "indicator-power/th/>\n"
@@ -218,7 +218,7 @@ msgstr "ไฟฉาย"
 
 #: ../src/service.c:684
 msgid "Warning: Heavy use can damage the LED!"
-msgstr ""
+msgstr "คำเตือน: การใช้งานหนักอาจทำให้ LED เสียหายได้!"
 
 #: ../src/service.c:690
 msgid "Battery settings…"

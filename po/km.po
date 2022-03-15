@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2022-03-13 12:53+0000\n"
+"PO-Revision-Date: 2022-03-15 13:30+0000\n"
 "Last-Translator: ប៉ុកណូ រ៉ូយ៉ាល់ <poknoroyal@outlook.com>\n"
 "Language-Team: Central Khmer <https://translate.ubports.com/projects/ubports/"
 "indicator-power/km/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 #. TRANSLATORS: system power cord
 #: ../src/device.c:524
 msgid "AC Adapter"
-msgstr "អាដាប់ទ័រ​ចរន្ត​ឆ្លាស់"
+msgstr "អាដាប់ទ័រ AC"
 
 #. TRANSLATORS: laptop primary battery
 #: ../src/device.c:528 ../src/service.c:443
@@ -94,20 +94,20 @@ msgstr "មិន​ស្គាល់"
 #: ../src/device.c:641
 #, c-format
 msgid "%0d:%02d to charge"
-msgstr "%0d:%02d ចំពោះ​កម្រិត​ថ្ម"
+msgstr "នៅ %0d:%02d ទៀតសាកថ្ម"
 
 #. TRANSLATORS: H:MM (hours, minutes) to discharge the battery. Example: "1:30 left"
 #: ../src/device.c:646
 #, c-format
 msgid "%0d:%02d left"
-msgstr "%0d:%02d នៅសល់"
+msgstr "នៅសល់ %0d:%02d"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) to charge" the battery.
 #. Example: "1 hour 10 minutes to charge"
 #: ../src/device.c:681
 #, c-format
 msgid "%d %s %d %s to charge"
-msgstr "%d %s %d %s ចំពោះ​កម្រិត​ថ្ម"
+msgstr "នៅ %d %s %d %s ទៀតសាកថ្ម"
 
 #: ../src/device.c:682 ../src/device.c:700
 msgid "hour"
@@ -125,21 +125,21 @@ msgstr[0] "នាទី"
 #: ../src/device.c:689
 #, c-format
 msgid "%d %s to charge"
-msgstr "%d %s ចំពោះ​កម្រិត​ថ្ម"
+msgstr "នៅ %d %s ទៀតសាកថ្ម"
 
 #. TRANSLATORS: "X (hour,hours) Y (minute,minutes) left" until the battery's empty.
 #. Example: "1 hour 10 minutes left"
 #: ../src/device.c:699
 #, c-format
 msgid "%d %s %d %s left"
-msgstr "%d %s %d %s នៅ​សល់"
+msgstr "នៅសល់ %d %s %d %s"
 
 #. TRANSLATORS: "Y (minute,minutes) left" until the battery's empty.
 #. Example: "59 minutes left"
 #: ../src/device.c:707
 #, c-format
 msgid "%d %s left"
-msgstr "%d %s នៅ​សល់"
+msgstr "នៅសល់ %d %s"
 
 #. TRANSLATORS: example: "battery (charged)"
 #: ../src/device.c:764
@@ -182,7 +182,7 @@ msgstr "ថ្មទាបណាស់"
 #: ../src/notifier.c:289
 #, c-format
 msgid "%.0f%% charge remaining"
-msgstr "ការចោទប្រកាន់នៅសល់ %.0f%%"
+msgstr "ការសាកថ្មនៅសល់ %.0f%%"
 
 #: ../src/notifier.c:321
 msgid "OK"
@@ -198,7 +198,7 @@ msgstr "កម្រិត​បញ្ចូល​ថ្ម"
 
 #: ../src/service.c:636
 msgid "Show Time in Menu Bar"
-msgstr "បង្ហាញ​ពេលវេលា​ក្នុង​របារ​ម៉ឺនុយ"
+msgstr "បង្ហាញម៉ោងនៅក្នុងរបារម៉ឺនុយ"
 
 #: ../src/service.c:640
 msgid "Show Percentage in Menu Bar"

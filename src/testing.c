@@ -301,6 +301,7 @@ indicator_power_testing_init (IndicatorPowerTesting * self)
                                                UP_DEVICE_KIND_BATTERY,
                                                50.0,
                                                UP_DEVICE_STATE_DISCHARGING,
+                                               UP_DEVICE_TECHNOLOGY_LIPOL,
                                                60*30,
                                                TRUE);
 

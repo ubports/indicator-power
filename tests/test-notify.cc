@@ -235,6 +235,7 @@ TEST_F(NotifyFixture, PercentageToLevel)
                                              UP_DEVICE_KIND_BATTERY,
                                              50.0,
                                              UP_DEVICE_STATE_DISCHARGING,
+                                             UP_DEVICE_TECHNOLOGY_LIPOL,
                                              30,
                                              TRUE);
 
@@ -314,6 +315,7 @@ TEST_F(NotifyFixture, LevelsDuringBatteryDrain)
                                              UP_DEVICE_KIND_BATTERY,
                                              50.0,
                                              UP_DEVICE_STATE_DISCHARGING,
+                                             UP_DEVICE_TECHNOLOGY_LIPOL,
                                              30,
                                              TRUE);
 
@@ -387,6 +389,7 @@ TEST_F(NotifyFixture, EventsThatChangeNotifications)
                                              UP_DEVICE_KIND_BATTERY,
                                              percent_low + 1.0,
                                              UP_DEVICE_STATE_DISCHARGING,
+                                             UP_DEVICE_TECHNOLOGY_LIPOL,
                                              30,
                                              TRUE);
 

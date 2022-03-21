@@ -1,3 +1,10 @@
+indicator-power (12.10.9+ubports0) xenial; urgency=medium
+
+  * Ignore batteries with unknown technology when merging
+  * Sort batteries with known technology before others
+
+ -- Maciej Sopyło <me@klh.io>  Mon, 22 Nov 2021 20:00:38 +0100
+
 indicator-power (12.10.8+ubports2) xenial; urgency=medium
 
   * Try to detect if flash needs to be enabled (latched) separately 

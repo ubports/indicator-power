@@ -174,6 +174,7 @@ device_compare_func (gconstpointer ga, gconstpointer gb)
 {
   int ret;
   int state;
+  int technology;
   const IndicatorPowerDevice * a = ga;
   const IndicatorPowerDevice * b = gb;
   const gboolean a_power_supply = indicator_power_device_get_power_supply (a);
@@ -184,6 +185,8 @@ device_compare_func (gconstpointer ga, gconstpointer gb)
   const gdouble b_percentage = indicator_power_device_get_percentage (b);
   const time_t a_time = indicator_power_device_get_time (a);
   const time_t b_time = indicator_power_device_get_time (b);
+  const int a_technology = indicator_power_device_get_technology (a);
+  const int b_technology = indicator_power_device_get_technology (b);  
 
   ret = 0;
 
@@ -197,6 +200,17 @@ device_compare_func (gconstpointer ga, gconstpointer gb)
         {
           ret = 1;
         }
+    }
+
+  technology = UP_DEVICE_TECHNOLOGY_UNKNOWN;
+  if (!ret && (a_technology != b_technology) &&
+      (a_technology == technology || b_technology == technology))
+    {
+      if (a_technology != technology) { /* a has a defined battery technology */
+        ret = -1;
+      } else {
+        ret = 1;
+      }
     }
 
   state = UP_DEVICE_STATE_DISCHARGING;
@@ -1416,7 +1430,12 @@ create_totalled_battery_device (const GList * devices)
           const double percent = indicator_power_device_get_percentage (walk);
           const time_t t = indicator_power_device_get_time (walk);
           const UpDeviceState state = indicator_power_device_get_state (walk);
+          const UpDeviceTechnology technology = indicator_power_device_get_technology (walk);
 
+          if (technology == UP_DEVICE_TECHNOLOGY_UNKNOWN)
+            {
+              continue;
+            }
 
           if (percent > 0.01)
             {
@@ -1474,6 +1493,7 @@ create_totalled_battery_device (const GList * devices)
                                            UP_DEVICE_KIND_BATTERY,
                                            percent,
                                            state,
+                                           UP_DEVICE_TECHNOLOGY_UNKNOWN,
                                            time_left,
                                            TRUE);
     }

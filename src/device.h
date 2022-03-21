@@ -45,6 +45,7 @@ typedef struct _IndicatorPowerDevicePrivate IndicatorPowerDevicePrivate;
 #define INDICATOR_POWER_DEVICE_PERCENTAGE   "percentage"
 #define INDICATOR_POWER_DEVICE_TIME         "time"
 #define INDICATOR_POWER_DEVICE_POWER_SUPPLY "power-supply"
+#define INDICATOR_POWER_DEVICE_TECHNOLOGY   "technology"
 
 typedef enum
 {
@@ -77,6 +78,19 @@ typedef enum
 }
 UpDeviceState;
 
+typedef enum
+{
+  UP_DEVICE_TECHNOLOGY_UNKNOWN,
+  UP_DEVICE_TECHNOLOGY_LIION,
+  UP_DEVICE_TECHNOLOGY_LIPOL,
+  UP_DEVICE_TECHNOLOGY_FEPO,
+  UP_DEVICE_TECHNOLOGY_PB,
+  UP_DEVICE_TECHNOLOGY_NICD,
+  UP_DEVICE_TECHNOLOGY_NIMH,
+  UP_DEVICE_TECHNOLOGY_LAST
+}
+UpDeviceTechnology;
+
 
 /**
  * IndicatorPowerDeviceClass:
@@ -108,6 +122,7 @@ IndicatorPowerDevice* indicator_power_device_new (const gchar    * object_path,
                                                   UpDeviceKind     kind,
                                                   gdouble          percentage,
                                                   UpDeviceState    state,
+                                                  UpDeviceTechnology technology,
                                                   time_t           time,
                                                   gboolean         power_supply);
 
@@ -120,6 +135,7 @@ IndicatorPowerDevice* indicator_power_device_new_from_variant (GVariant * varian
 
 UpDeviceKind  indicator_power_device_get_kind              (const IndicatorPowerDevice * device);
 UpDeviceState indicator_power_device_get_state             (const IndicatorPowerDevice * device);
+UpDeviceTechnology indicator_power_device_get_technology   (const IndicatorPowerDevice * device);
 const gchar * indicator_power_device_get_object_path       (const IndicatorPowerDevice * device);
 gdouble       indicator_power_device_get_percentage        (const IndicatorPowerDevice * device);
 time_t        indicator_power_device_get_time              (const IndicatorPowerDevice * device);

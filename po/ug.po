@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: indicator-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 16:56-0400\n"
-"PO-Revision-Date: 2015-04-07 07:39+0000\n"
-"Last-Translator: Gheyret T.Kenji <Unknown>\n"
-"Language-Team: Uyghur <ug@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-09-05 19:21+0000\n"
+"Last-Translator: flame4 <alimjoo00@163.com>\n"
+"Language-Team: Uyghur <https://translate.ubports.com/projects/ubports/"
+"indicator-power/ug/>\n"
+"Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2018-10-27 19:56+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
 
 #. TRANSLATORS: system power cord
 #: ../src/device.c:524
@@ -77,7 +78,7 @@ msgstr "كومپيۇتېر"
 #. TRANSLATORS: unknown device
 #: ../src/device.c:568
 msgid "Unknown"
-msgstr "نامەلۇم"
+msgstr "بامەلۇم"
 
 #: ../src/device.c:608
 #, c-format
